@@ -1,0 +1,183 @@
+* {
+  margin: 0px 0px;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px;
+}
+
+.nav-container {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  width: calc(100vw - 128px); /* Bredde 100% plus 64 px margin */
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+.right-links a {
+  color: white;
+  font-family: "Inter";
+  font-size: 1.3em;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.right-links {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+.stagger-link {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.stagger-link-text {
+  text-shadow: 0px 1.5em 0px;
+  line-height: 1;
+}
+
+.kontakt-knap {
+  position: relative;
+  display: inline-block;
+  padding: 14px 28px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #2722a4;
+  margin-left: 34px;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.kontakt-knap span {
+  position: relative; /* Make the text stack above the pseudo-element */
+  z-index: 2; /* Higher than the pseudo-element's z-index */
+}
+
+.kontakt-knap:after /* Fylde figur til kontakt knap hover effekt */ {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 150%;
+  height: 150%;
+  border-radius: 40%;
+  background-color: #fc0e47; /* Fill color */
+  transform: translate(-50%, 50%); /* Put fylde figuren under knappen */
+  transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.kontakt-knap:hover:after {
+  transform: translate(-50%, -50%); /* Flyt fyld figuren ind i viewport */
+}
+
+.kontakt-knap:hover span {
+  color: #000000; /* Skift tekst på kontakt til sort */
+  transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.herobillede img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(100%) brightness(1.2);
+}
+
+.footer {
+  position: relative;
+  padding: 20px 64px;
+  background: #f8f8f8;
+}
+
+.headline-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.headline-button a {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 14px 28px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: #2722a4;
+  z-index: 2;
+  color: white;
+  font-family: "Inter";
+  font-size: 1.3em;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.headline-button h1 {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-tekst h3 {
+  color: #000;
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.footer-tekst {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container-footer-bottom {
+  padding-top: 50px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.socials-footer img {
+  width: 2vw;
+}
+
+.socials-footer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 20px;
+  bottom: 0;
+}
+
+.copyright-footer h5 {
+  color: #000;
+  font-family: Poppins;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
