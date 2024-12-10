@@ -38,3 +38,23 @@ window.addEventListener("scroll", () => {
   const speed = 0.5; // Hastigheden
   herobillede.style.transform = `translateY(${scrollPosition * speed}px)`;
 });
+
+//Burger menu
+const menuButton = document.querySelector(".hambruger-menu-knap");
+const rightLinks = document.querySelector(".right-links");
+const burgerIcon = document.querySelector(".burger-icon");
+const closeIcon = document.querySelector(".close-icon");
+
+// Gør mobil menu synlig ved at give den en active class, som flytter menuen fra venstre ind i midten af viewporten
+menuButton.addEventListener("click", () => {
+  rightLinks.classList.toggle("active"); // Fjerne eller tilføj 'active' class
+
+  // Skift mellem luk og hambruger ikoner
+  if (rightLinks.classList.contains("active")) {
+    burgerIcon.style.display = "none";
+    closeIcon.style.display = "block";
+  } else {
+    burgerIcon.style.display = "block";
+    closeIcon.style.display = "none";
+  }
+});
