@@ -76,8 +76,8 @@ body.lock-scroll {
   }
 
   .kontakt-knap span {
-    position: relative; /* Make the text stack above the pseudo-element */
-    z-index: 2; /* Higher than the pseudo-element's z-index */
+    position: relative; /* Sørger for at teksten er ovenpå fylde figuren */
+    z-index: 2; /* Putter z-index ordreren højere end fylde figuren */
   }
 
   .kontakt-knap:after /* Fylde figur til kontakt knap hover effekt */ {
