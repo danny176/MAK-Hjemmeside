@@ -89,12 +89,20 @@ nav {
   transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.herobillede {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
 .herobillede img {
   width: 100%;
   height: auto;
   object-fit: cover;
   object-position: center;
   filter: grayscale(100%) brightness(1.2);
+  transform: translateY(0); /* Initial position */
+  will-change: transform;
 }
 
 .footer {

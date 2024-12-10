@@ -30,3 +30,11 @@ staggerLinks.forEach((link) => {
     tl.reverse();
   });
 });
+
+//Hero billede parallax effect
+window.addEventListener("scroll", () => {
+  const scrollPosition = window.scrollY;
+  const herobillede = document.querySelector(".herobillede img");
+  const speed = 0.5; // Hastigheden
+  herobillede.style.transform = `translateY(${scrollPosition * speed}px)`;
+});
