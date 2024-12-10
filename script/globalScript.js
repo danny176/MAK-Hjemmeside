@@ -60,3 +60,14 @@ menuButton.addEventListener("click", () => {
     document.body.classList.remove("lock-scroll"); // Lås scroll op igen når hamburger menu er lukket
   }
 });
+
+// Gsap animation for rundede hjørner
+window.addEventListener('load', () => {  // Lytter efter, at hele siden er indlæst, før animationen starter
+  gsap.to('.herobillede img', {  // Vælger alle billeder indenfor '.herobillede' containeren og forbereder animationen
+    borderBottomLeftRadius: '10%',  // Sætter den nederste venstre radius til 10% af billedets størrelse, skaber en let kurve
+    borderBottomRightRadius: '10%',  // Sætter den nederste højre radius til 10% af billedets størrelse, skaber en let kurve
+    duration: 1,  // Definerer varigheden af animationen til 1 sekund
+    delay: 0.4,  // Angiver en forsinkelse på 0.4 sekunder efter at siden er fuldt indlæst, før animationen starter
+    ease: 'bounce.out',  // Bestemmer animationens easing, 'bounce.out' skaber en hoppende effekt.
+  });
+});

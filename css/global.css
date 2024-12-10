@@ -1,13 +1,17 @@
+/* Global CSS */
+
 * {
   margin: 0px 0px;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
-}
+} /* Universelle CSS regler der hjælper med styling og layout */
 
 body.lock-scroll {
   overflow: hidden; /* Bruges til at udelukke scrolling når burgermenu er aktiv */
 }
+
+/* Media query der styler alt til desktop */
 
 @media (min-width: 500px) {
   nav {
@@ -30,7 +34,7 @@ body.lock-scroll {
   .right-links a {
     color: white;
     font-family: "Inter";
-    font-size: 1.3em;
+    font-size: 1.2em;
     font-weight: 500;
     text-decoration: none;
   }
@@ -85,7 +89,7 @@ body.lock-scroll {
     width: 150%;
     height: 150%;
     border-radius: 40%;
-    background-color: #fc0e47; /* Fill color */
+    background-color: #fc0e47; /* farve fyld */
     transform: translate(-50%, 50%); /* Put fylde figuren under knappen */
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
@@ -107,7 +111,7 @@ body.lock-scroll {
 
   .herobillede img {
     width: 100%;
-    height: auto;
+    height: 90vh;
     object-fit: cover;
     object-position: center;
     filter: grayscale(100%) brightness(1.2);
@@ -208,6 +212,8 @@ body.lock-scroll {
     display: none;
   }
 }
+
+/* Media query der styler alt til mobil */
 
 @media (max-width: 500px) {
   .firma-navn img {
