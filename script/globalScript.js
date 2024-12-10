@@ -53,8 +53,10 @@ menuButton.addEventListener("click", () => {
   if (rightLinks.classList.contains("active")) {
     burgerIcon.style.display = "none";
     closeIcon.style.display = "block";
+    document.body.classList.add("lock-scroll"); // Lås scroll så hamburger menu er fixed
   } else {
     burgerIcon.style.display = "block";
     closeIcon.style.display = "none";
+    document.body.classList.remove("lock-scroll"); // Lås scroll op igen når hamburger menu er lukket
   }
 });

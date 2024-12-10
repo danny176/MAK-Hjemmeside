@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+body.lock-scroll {
+  overflow: hidden; /* Bruges til at udelukke scrolling når burgermenu er aktiv */
+}
+
 @media (min-width: 500px) {
   nav {
     display: flex;
@@ -197,11 +201,11 @@
   }
 
   .firma-navn-mobile img {
-display: none;
+    display: none;
   }
 
   .hambruger-menu-knap {
-display: none;
+    display: none;
   }
 }
 
@@ -253,15 +257,15 @@ display: none;
     object-fit: cover;
     object-position: center;
     filter: grayscale(100%) brightness(1.2);
-    transform: translateY(0); /* Initial position */
+    transform: translateY(0);
     will-change: transform;
   }
 
   .right-links {
     display: flex;
-    position: fixed;
+    position: absolute;
     top: 0;
-    left: -100%; /* Initially hidden off-screen */
+    left: -100%;
     width: 100%;
     height: 100vh;
     background-color: #2722a4;
@@ -274,7 +278,8 @@ display: none;
   }
 
   .right-links.active {
-    left: 0; /* Slides into view */
+    left: 0;
+    overflow: hidden;
   }
 
   .firma-navn-mobile {
@@ -304,7 +309,7 @@ display: none;
     align-items: center;
     border-radius: 10px;
     background: #2722a4;
-    z-index: 2;
+    z-index: 1;
     color: white;
     font-family: "Inter";
     font-size: 1.3em;
