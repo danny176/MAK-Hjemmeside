@@ -15,7 +15,7 @@
   /*overskriften*/
   .herotekst h1 {
     color: #fff;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -25,16 +25,45 @@
   /*teksten nedenunder*/
   .herotekst h2 {
     color: #FFF;
-    font-family: Poppins;
+    font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: normal;
   }
 
+  /*programmerne*/
   .programmer {
     background-color: #2722a4;
     margin-top: 5%;
+    margin-bottom: 5%;
     margin-left: 5%;
     margin-right: 5%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    
+  }
+
+  /*teksten til programmerne*/
+  .programmerteksten {
+    color: #fff;
+    font-family: "Poppins";
+  }
+
+  /*den tykke tekst i programmerne*/
+  .tyktekst {
+    font-weight: Bolder;
+  }
+
+  .kontaktknap {
+    padding: 14px 28px;
+    border-radius: 10px;
+    border-style: none;
+  }
+
+  .kontaktknap:hover {
+    background-color: #fc0e47; 
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    
   }
