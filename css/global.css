@@ -168,6 +168,15 @@ body.lock-scroll {
     line-height: normal;
   }
 
+  .footer-tekst h3 span {
+    color: #000;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
   .footer-tekst {
     display: flex;
     flex-direction: column;
@@ -182,8 +191,26 @@ body.lock-scroll {
     align-items: flex-end;
   }
 
+  .socials-footer-beholder {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+
+  .socials-footer-beholder h3 {
+    margin: 0 0 80px 0;
+    color: #000;
+    font-family: "Poppins";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
   .socials-footer img {
-    width: 2vw;
+    width: 3.5vw;
   }
 
   .socials-footer {
@@ -204,6 +231,13 @@ body.lock-scroll {
     line-height: normal;
   }
 
+  .copyright-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
   .firma-navn-mobile img {
     display: none;
   }
@@ -217,7 +251,7 @@ body.lock-scroll {
 
 @media (max-width: 500px) {
   .firma-navn img {
-    width: 80px;
+    width: 100px;
     height: auto;
     margin-left: 15px;
   }
