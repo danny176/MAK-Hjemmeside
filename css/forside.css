@@ -1,5 +1,9 @@
+* {
+    font-family: Poppins;
+}
+
 section {
-    padding: 20px;
+    margin: 5% 5% 5% 5%;
 }
 
 .programs, .process {
@@ -21,4 +25,101 @@ section {
     display: flex;
     gap: 10px;
     align-items: center;
+}
+
+.sektion-intro {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.intro-tekst {
+    font-family: Poppins;
+}
+
+.intro-tekst h2 {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.intro-tekst h1 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.intro-tekst p {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.citat {
+    font-style: italic;
+}
+
+.intro-knap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #2722a4;
+    z-index: 2;
+    color: white;
+    font-family: "Poppins";
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+}
+
+.program-knap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #ffffff;
+    z-index: 2;
+    color: rgb(0, 0, 0);
+    font-family: "Poppins";
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+}
+
+.sektion-forløb {
+    display: flex;
+}
+
+.sektion-kontakt-knap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #2722a4;
+    z-index: 2;
+    color: white;
+    font-family: "Poppins";
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+}
+
+.sektion-anmeldelser {
+    background-color: #2722a4;
+    display: flex;
+    color: white;
+}
+
+.anmeldelser-citat {
+    font-style: italic;
 }
