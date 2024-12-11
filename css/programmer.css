@@ -1,0 +1,40 @@
+/*Programmer style*/
+
+/*Teksten på billedet øverst*/
+.herotekst {
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    margin-left: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+  }
+
+  /*overskriften*/
+  .herotekst h1 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  
+  /*teksten nedenunder*/
+  .herotekst h2 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
+  }
+
+  .programmer {
+    background-color: #2722a4;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
