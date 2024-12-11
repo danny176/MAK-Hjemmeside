@@ -2,6 +2,8 @@
     font-family: Poppins;
 }
 
+@media (min-width: 500px) {
+
 section {
     margin: 5% 5% 5% 5%;
 }
@@ -122,4 +124,6 @@ section {
 
 .anmeldelser-citat {
     font-style: italic;
+}
+
 }
