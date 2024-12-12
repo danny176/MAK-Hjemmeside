@@ -56,47 +56,133 @@
     <div class="herobillede">
       <img src="/images/kontaktsideherobillede.png" alt="forside-billede" />
       <div class="herotekst">
-      <h1>Kontakt mig her</h1>
-      <h2>
-        Nogle tvivler eller kommentarer? Tøv ikke med et smide mig en besked,
-        også vender jeg hurtigst muligt tilbage til dig
-      </h2>
-    </div>
+        <h1>Kontakt mig her</h1>
+        <h2>
+          Nogle tvivler eller kommentarer? Tøv ikke med et smide mig en besked,
+          også vender jeg hurtigst muligt tilbage til dig
+        </h2>
+      </div>
     </div>
 
-<!--Kontakt formular-->
-<div class="billede-kontaktform">
-<img src="images/mohammadkrydsedearme.png" alt="mohammadkryds">
+    <!--Kontakt formular-->
+    <div class="billede-kontaktform">
+      <div class="billedeMoh">
+        <img src="images/mohammadkrydsedearme.png" alt="mohammadkryds" />
+      </div>
 
-    <form action="/submit" method="post">
+      <form action="process_form.php" method="post">
         <h2>Udfyld kontaktformularen</h2>
-<div class="kontakt-information">
-        <label for="firstname">Fornavn</label>
-        <input type="text" id="firstname" name="firstname" placeholder="Indtast dit fornavn" required>
+        <div class="kontakt-information">
+          <div class="kontakt1">
+            <label for="firstname">Fornavn</label>
+            <input
+              type="text"
+              id="firstname"
+              name="firstname"
+              placeholder="Indtast dit fornavn"
+              required
+            />
 
-        <label for="lastname">Navn</label>
-        <input type="text" id="lastname" name="lastname" placeholder="Indtast dit navn" required>
+            <label for="lastname">Efternavn</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              placeholder="Indtast dit navn"
+              required
+            />
+          </div>
+          <div class="kontakt2">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="Indtast din email"
+              required
+            />
 
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Indtast din email" required>
-
-        <label for="phone">Telefon nummer</label>
-        <input type="text" id="phone" name="phone" placeholder="Indtast dit telefonnummer" required>
-    </div>
-        <h3>Vælg emne</h3>
-        <div class="radio-group">
-            <label><input type="radio" name="subject" value="general" required> General forespørgsel</label>
-            <label><input type="radio" name="subject" value="kickstarter"> Kickstarter</label>
-            <label><input type="radio" name="subject" value="find-rytmen"> Find rytmen</label>
-            <label><input type="radio" name="subject" value="fuld-power"> Fuld power</label>
+            <label for="phone">Telefon nummer</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="Indtast dit telefonnummer"
+              required
+            />
+          </div>
         </div>
 
-        <h3>Besked</h3>
-        <textarea id="message" name="message" placeholder="Skriv din besked her" required></textarea>
+        <div class="vaelg-emne">
+          <h3>Vælg emne</h3>
+          <div class="radio-group">
+            <label
+              ><input type="radio" name="subject" value="general" required />
+              General forespørgsel
+              <img
+                class="checkmark unchecked"
+                src="ikoner/unchecked.svg"
+                alt="Unchecked"
+              />
+              <img
+                class="checkmark checked"
+                src="ikoner/checkmark.svg"
+                alt="Checked"
+              />
+            </label>
+            <label
+              ><input type="radio" name="subject" value="kickstarter" />
+              Kickstarter
+              <img
+                class="checkmark unchecked"
+                src="ikoner/unchecked.svg"
+                alt="Unchecked" />
+              <img
+                class="checkmark checked"
+                src="ikoner/checkmark.svg"
+                alt="Checked"
+            /></label>
+            <label
+              ><input type="radio" name="subject" value="find-rytmen" /> Find
+              rytmen
+              <img
+                class="checkmark unchecked"
+                src="ikoner/unchecked.svg"
+                alt="Unchecked" />
+              <img
+                class="checkmark checked"
+                src="ikoner/checkmark.svg"
+                alt="Checked"
+            /></label>
+            <label
+              ><input type="radio" name="subject" value="fuld-power" /> Fuld
+              power
+              <img
+                class="checkmark unchecked"
+                src="ikoner/unchecked.svg"
+                alt="Unchecked" />
+              <img
+                class="checkmark checked"
+                src="ikoner/checkmark.svg"
+                alt="Checked"
+            /></label>
+          </div>
+        </div>
 
-        <button type="submit">Send</button>
-    </form>
-</div>
+        <div class="besked-send">
+          <h3>Besked</h3>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Skriv din besked her"
+            required
+            lang="da"
+          ></textarea>
+
+          <button type="submit">Send</button>
+        </div>
+      </form>
+    </div>
 
     <!--footer-->
     <section class="footer">
