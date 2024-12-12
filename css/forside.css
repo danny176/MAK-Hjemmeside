@@ -120,6 +120,7 @@ section {
     background-color: #2722a4;
     display: flex;
     color: white;
+    margin: 0;
 }
 
 .anmeldelser-citat {
