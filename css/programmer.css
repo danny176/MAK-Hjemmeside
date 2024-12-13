@@ -1,5 +1,6 @@
 /*Programmer style*/
 
+/*Style til desktop*/
 /*Teksten på billedet øverst*/
 .herotekst {
     position: absolute;
@@ -42,13 +43,15 @@
     display: flex;
     flex-direction: row;
     border-radius: 10px;
-    
   }
 
   /*teksten til programmerne*/
   .programmerteksten {
     color: #fff;
     font-family: "Poppins";
+    padding-left: 3%;
+    padding-top: 3%;
+    padding-right: 3%;
   }
 
   /*den tykke tekst i programmerne*/
@@ -56,14 +59,65 @@
     font-weight: Bolder;
   }
 
-  .kontaktknap {
-    padding: 14px 28px;
-    border-radius: 10px;
-    border-style: none;
+  .programmerteksten h3 {
+    font-size: 1.7rem;
   }
 
-  .kontaktknap:hover {
-    background-color: #fc0e47; 
-    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+/*billede i programmer style*/
+  #kickbillede {
+ height: 450px;
+ width: auto;
+  }
+
+  #powerbillede {
+height: 550px;
+width: auto;
+  }
+
+  #rytmenbillede {
+    height: 550px;
+    width: auto;
+  }
+  
+
+  /*Kontaktknappen på de forskellige pakker*/
+  .kontaktknap {
+    padding: 15px 30px;
     
+    border-radius: 10px;
+    border-style: none;
+    float: right;
+    position: relative;
+    background:#FFF;
+    z-index: 2;
+    overflow: hidden;
+  }
+
+  .kontaktknap span {
+    position: relative; /* Sørger for at teksten er ovenpå fylde figuren */
+    z-index: 2; /* Putter z-index ordreren højere end fylde figuren */
+    font-size: 1rem;
+  }
+
+  .kontaktknap:after /* Fylde figur til kontakt knap hover effekt */ {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150%;
+    height: 150%;
+    border-radius: 40%;
+    background-color: #fc0e47; /* farve fyld */
+    transform: translate(-50%, 50%); /* Put fylde figuren under knappen */
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .kontaktknap:hover:after {
+    transform: translate(-50%, -50%); /* Flyt fyld figuren ind i viewport */
+  }
+
+  .kontaktknap:hover span {
+    color: #FFF;
+    transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
