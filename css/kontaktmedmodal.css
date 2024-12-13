@@ -1,0 +1,502 @@
+@media (min-width: 500px) {
+  .herobillede {
+    width: 100%;
+    height: 90;
+    overflow: hidden;
+  }
+
+  .herobillede img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) brightness(1.2);
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  .herotekst {
+    position: absolute;
+    top: 45vh;
+    left: 0;
+    margin-left: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 50vw;
+  }
+
+  .herotekst h1 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .herotekst h2 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .kontakt-information {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .kontakt1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kontakt1 input,
+  .kontakt2 input {
+    margin-bottom: 25px;
+    color: #8d8d8d;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .kontakt2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kontakt-information label {
+    color: #8d8d8d;
+    font-family: Poppins;
+    font-size: 0.7vw;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .kontakt-information input {
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    background: none;
+    color: black;
+    width: 220px;
+  }
+
+  .billede-kontaktform {
+    display: flex;
+    gap: 100px;
+    margin: 100px 64px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .billede-kontaktform img {
+    width: 35vw;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .besked-send {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .besked-send textarea {
+    height: 200px;
+    border-radius: 10px;
+    background: rgba(155, 155, 155, 0.2);
+    box-shadow: none;
+    border: none;
+    padding: 10px;
+    resize: none;
+    color: #000000;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .besked-send textarea::placeholder {
+    color: #8d8d8d;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .radio-group {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 0.5vw;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .vaelg-emne {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vaelg-emne h3,
+  .besked-send h3 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .billede-kontaktform h2 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+  }
+
+  .besked-send button {
+    border-radius: 10px;
+    background: var(--Bl, #2722a4);
+    height: 50px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 1vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .radio-group input[type="radio"] {
+    display: none;
+  }
+
+  .radio-group label {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+
+  .radio-group .checkmark {
+    width: 20px;
+    height: 20px;
+  }
+
+  .radio-group .unchecked {
+    display: block;
+  }
+
+  .radio-group .checked {
+    display: none;
+  }
+
+  .radio-group input[type="radio"]:checked ~ .checked {
+    display: block;
+  }
+
+  .radio-group input[type="radio"]:checked ~ .unchecked {
+    display: none;
+  }
+
+  .modalet {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /*Baggrunden bag modalet*/
+  }
+
+  #modalindhold .lukknap {
+    width: 25px;
+    height: auto;
+    float: right;
+  }
+
+  #vikontekst {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+
+  #modalindhold .vikon {
+    width: 120px;
+    height: auto;
+    padding-top: 5%;
+    
+  }
+  
+#modalindhold p {
+  padding-top: 10%;
+ text-align: center;
+}
+
+  /* Modal indholdet */
+  #modalindhold {
+    background-color: #ffffff;
+    font-family: "Poppins";
+    margin: auto;
+    padding: 1%;
+    padding-bottom: 5%;
+    width: 60%;
+  }
+
+
+  .lukknap:hover {
+    cursor: pointer;
+  }
+
+}
+
+@media (max-width: 499px) {
+  .herobillede {
+    width: 100%;
+    height: 90;
+    overflow: hidden;
+  }
+
+  .herobillede img {
+    width: 100%;
+    height: 50vh;
+    object-fit: cover;
+    object-position: center;
+    filter: grayscale(100%) brightness(1.2);
+    transform: translateY(0);
+    will-change: transform;
+  }
+
+  .herotekst {
+    position: absolute;
+    top: 30vh;
+    left: 0;
+    margin-left: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 70vw;
+  }
+
+  .herotekst h1 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 8vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+
+  .herotekst h2 {
+    color: #fff;
+    font-family: Poppins;
+    font-size: 3vw;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+
+  .kontakt-information {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .kontakt1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kontakt1 input,
+  .kontakt2 input {
+    margin-bottom: 25px;
+    color: #8d8d8d;
+    font-family: Poppins;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+  }
+
+  .kontakt2 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .kontakt-information label {
+    color: #8d8d8d;
+    font-family: Poppins;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .kontakt-information input {
+    border: none;
+    border-bottom: 1px solid grey;
+    outline: none;
+    padding: 0.5rem 0;
+    font-size: 0.8rem;
+    background: none;
+    color: black;
+    width: 280px;
+  }
+
+  .billede-kontaktform {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 50px 64px;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  .billede-kontaktform img {
+    width: 90vw;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .besked-send {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .besked-send textarea {
+    height: 200px;
+    border-radius: 10px;
+    background: rgba(155, 155, 155, 0.2);
+    box-shadow: none;
+    border: none;
+    padding: 10px;
+    resize: none;
+    color: #000000;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .besked-send textarea::placeholder {
+    color: #8d8d8d;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+  }
+
+  .radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 25px;
+    color: #000;
+    font-family: Poppins;
+    font-size: 0.5vw;
+    font-style: normal;
+    font-weight: 400;
+    width: 400px;
+  }
+
+  .vaelg-emne {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .vaelg-emne h3,
+  .besked-send h3 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  .billede-kontaktform h2 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 5vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .besked-send button {
+    border-radius: 10px;
+    background: var(--Bl, #2722a4);
+    height: 50px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: #fff;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 4vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .radio-group input[type="radio"] {
+    display: none;
+  }
+
+  .radio-group label {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 0.5rem;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+
+  .radio-group .checkmark {
+    width: 20px;
+    height: 20px;
+  }
+
+  .radio-group .unchecked {
+    display: block;
+  }
+
+  .radio-group .checked {
+    display: none;
+  }
+
+  .radio-group input[type="radio"]:checked ~ .checked {
+    display: block;
+  }
+
+  .radio-group input[type="radio"]:checked ~ .unchecked {
+    display: none;
+  }
+}
+
