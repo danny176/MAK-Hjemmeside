@@ -52,14 +52,14 @@ window.onclick = function (event) {
 
 // Funktion til at validere formularen
 function validateForm() {
-  // Tjek om alle obligatoriske felter er udfyldt
+  // Tjek om alle felter i formularen er udfyldt
   if (
     firstnameInput.value.trim() === "" ||
     lastnameInput.value.trim() === "" ||
     emailInput.value.trim() === "" ||
     phoneInput.value.trim() === "" ||
     messageInput.value.trim() === "" ||
-    !Array.from(subjectInputs).some((input) => input.checked) // Tjek om mindst én radioknap er valgt
+    !Array.from(subjectInputs).some((input) => input.checked) // Tjek om mindst en radioknap er valgt
   ) {
     return false; // Validering fejler, hvis et felt mangler at blive udfyldt
   }
@@ -70,7 +70,7 @@ function validateForm() {
     return false;
   }
 
-  return true; // Validering er godkendt
+  return true; // Valideringen er godkendt
 }
 
 // Funktion til at validere e-mailformat
