@@ -55,21 +55,23 @@
 <main>
 
     <!--Video sektion-->
-    <video autoplay muted loop id="myVideo">
-      <source src="rain.mp4" type="video/mp4">
-    </video>
-
-    <div class="hero-tekst">
-
-    <h2>Personlig træner</h2>      
-    <h1>Mohammad Ali Karim</h1>
-    <p>Skræddersyede træningsprogrammer tilpasset dine behov - med fuld passion og motivation hjælper jeg dig med at realisere dine fitness mål.  </p>
+    <div class="video-box">
+      <video class="baggrund-video" autoplay loop muted playsinline>
+        <source src="video/2. semester stemningsvideo.mp4" type="video/mp4">
+      </video>
+      <div class="filter">
+      <div class="video-tekst">
+        <h2>Personlig træner</h2>  
+        <h1>Mohammad Ali Karim</h1>
+        <p>Skræddersyede træningsprogrammer tilpasset dine behov - med fuld passion og motivation hjælper jeg dig med at realisere dine fitness mål.</p>
+      </div>
+    </div>
     </div>
 
 <section class="sektion-intro">
     <!-- Introduktion om træneren -->
-    <div>
-        <img src="images/gladportraet.png" alt="Portræt af Mohammad">
+    <div class="intro-billede-box">
+        <img class="intro-billede" src="images/gladportraet.png" alt="Portræt af Mohammad">
     </div>
     <section class="intro-tekst">
     <h2>Personlig træner</h2>
@@ -191,7 +193,7 @@
             <p class="anmeldelser-citat">"Jeg havde aldrig trænet før, men med Mohammad's hjælp følte jeg mig tryg fra dag et."</p><br>
             <p>Navn / Jens</p>
         </blockquote>
-    <div>
+    <div class="anmeldelser-stjerner">
         <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
         <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
         <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
@@ -202,6 +204,27 @@
 <div>
     <img class="anmeldelser-billede" src="images/transformation.png" alt="Transformerings billede">
 </div>
+</section>
+
+<section class="sektion-anmeldelser-mobil">
+  <!-- Klientanmeldelser -->
+  <section class="anmeldelser-tekst-mobil">
+      <h2>Anmeldelser fra klienter</h2><br>
+      <div>
+        <img class="anmeldelser-billede-mobil" src="images/transformation.png" alt="Transformerings billede">
+      </div>
+      <blockquote>
+          <p class="anmeldelser-citat-mobil">"Jeg havde aldrig trænet før, men med Mohammad's hjælp følte jeg mig tryg fra dag et."</p><br>
+          <p>Navn / Jens</p>
+      </blockquote>
+  <div class="anmeldelser-stjerner">
+      <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
+      <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
+      <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
+      <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
+      <img src="ikoner/tomstjerne.svg" alt="Ikon af stjerne der ikke er udfyldt">
+  </div>
+</section>
 </section>
 
 
