@@ -54,10 +54,17 @@
 
 <main>
 
-    <!--Hero sektion-->
-    <div class="herobillede">
-        <img src="/images/herobilledeforside.png" alt="forside-billede" />
-      </div>
+    <!--Video sektion-->
+    <video autoplay muted loop id="myVideo">
+      <source src="rain.mp4" type="video/mp4">
+    </video>
+
+    <div class="hero-tekst">
+
+    <h2>Personlig træner</h2>      
+    <h1>Mohammad Ali Karim</h1>
+    <p>Skræddersyede træningsprogrammer tilpasset dine behov - med fuld passion og motivation hjælper jeg dig med at realisere dine fitness mål.  </p>
+    </div>
 
 <section class="sektion-intro">
     <!-- Introduktion om træneren -->
@@ -88,7 +95,7 @@
             <h3>Kickstarter</h3>
             <p>Få motivation til at starte eller genstarte din udvikling til effektiv fitness træning. Skræddersyet lige efter dine behov.</p>
             <button class="program-knap">
-              <p>Læs mere</p>
+              <p>Gå til træningsprogram</p>
             </button>
           </article>
         </div>
@@ -96,34 +103,38 @@
             <div>
                 <img class="program-billede" src="images/traeningsprogramto.png" alt="Træning med Mohammad">
             </div>
+            <article class="program-tekst">
             <h3>Find rytmen</h3>
             <p>Et lidt længere træningsprogram, som fastholder din motivation til træning, og giver dig et boost for at komme tættere på dine mål. Skræddersyet lige efter dine behov.</p>
             <button class="program-knap">
-              <p>Læs mere</p>
+              <p>Gå til træningsprogram</p>
             </button>
+          </article>
         </div>
         <div class="program">
             <div>
                 <img class="program-billede" src="images/traeningsprogramtre.png" alt="Træning med Mohammad">
             </div>
+            <article class="program-tekst">
             <h3>Fuld power</h3>
             <p>Et større træningsprogram, som er med til at give måske et af dine største livsforandringer. Skræddersyet lige efter dine behov.</p>
             <button class="program-knap">
-              <p>Læs mere</p>
+              <p>Gå til træningsprogram</p>
             </button>
+          </article>
         </div>
     </div>
 </section>
 
-<section>
+<section class="forløb">
     <!-- Hvordan forløbet fungerer -->
     <h2>Sådan ser et forløb ud hos mig</h2>
     <div class="sektion-forløb">
-        <div>
-            <img src="images/mohammadsnak.png" alt="Snakke med Mohammad">
+        <div class="billede-forløb-container">
+            <img class="billede-forløb" src="images/mohammadsnak.png" alt="Snakke med Mohammad">
         </div>
-    <div class="process">
-        <div class="process-step">
+    <div class="process-forløb">
+        <div class="process-trin">
             <div>
                 <img src="ikoner/ikonet.svg" alt="Ikon af sigtekorn">
             </div>
@@ -132,7 +143,7 @@
                 <p>Vi afklare hvad dine mål er, og ser på hvordan de kan realiseres</p>
             </article>
         </div>
-        <div class="process-step">
+        <div class="process-trin">
             <div>
                 <img src="ikoner/blyant.svg" alt="Ikon af blyant og linial">
             </div>
@@ -141,7 +152,7 @@
                 <p>Du for et skræddersyet træningsprogram, som hjælper dig med at opnå dine mål på den mest effektive måde.</p>
             </article>
         </div>
-        <div class="process-step">
+        <div class="process-trin">
             <div>
                 <img src="ikoner/personer.svg" alt="Ikon af personer">
             </div>
@@ -151,7 +162,7 @@
                     komme i mål sammen</p>
             </article>
         </div>
-        <div class="process-step">
+        <div class="process-trin">
             <div>
                 <img src="ikoner/firkanter.svg" alt="Ikon af firkanter">
             </div>
@@ -164,7 +175,7 @@
 </div>
 </section>
 
-<section>
+<section class="kontakt-sektion">
     <!-- Kontakt sektion til forside -->
     <h2>Hvis du vil vide mere, er du velkommen til at kontakte mig, så finder vi en løsning, som passer netop til dig.</h2>
     <button class="sektion-kontakt-knap">
@@ -174,11 +185,11 @@
 
 <section class="sektion-anmeldelser">
     <!-- Klientanmeldelser -->
-    <section>
+    <section class="anmeldelser-tekst">
         <h2>Anmeldelser fra klienter</h2><br>
         <blockquote>
-            <p class="anmeldelser-citat">"Jeg havde aldrig trænet før, men med Mohammad's hjælp følte jeg mig tryg fra dag ét."</p><br>
-            <p>Navn / Jens</p><br>
+            <p class="anmeldelser-citat">"Jeg havde aldrig trænet før, men med Mohammad's hjælp følte jeg mig tryg fra dag et."</p><br>
+            <p>Navn / Jens</p>
         </blockquote>
     <div>
         <img src="ikoner/udfyldtstjerne.svg" alt="Ikon af stjerne der er udfyldt">
@@ -189,7 +200,7 @@
     </div>
 </section>
 <div>
-    <img src="images/transformation.png" alt="Transformerings billede">
+    <img class="anmeldelser-billede" src="images/transformation.png" alt="Transformerings billede">
 </div>
 </section>
 
