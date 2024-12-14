@@ -1,33 +1,131 @@
-/*Om mig style*/
+/*Style af siden Om Mig */
 
-/*Teksten på billedet øverst*/
-.herotekst {
-    position: absolute;
-    top: 50vh;
-    left: 0;
-    margin-left: 64px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    max-width: 600px;
+/*Style til desktop*/
+@media (min-width: 500px) {
+  /*Teksten på billedet øverst*/
+  .herotekst {
+      position: absolute;
+      top: 50vh;
+      left: 0;
+      margin-left: 64px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 600px;
+    }
+  
+    /*overskriften*/
+    .herotekst h1 {
+      color: #fff;
+      font-family: "Poppins";
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+    }
+    
+    /*teksten nedenunder*/
+    .herotekst h2 {
+      color: #FFF;
+      font-family: "Poppins";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+
+  /*Style af afsnit 1*/
+    .sektion1 {
+      display: flex;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 5%;
+      margin-bottom: 5%;
   }
-
-  /*overskriften*/
-  .herotekst h1 {
-    color: #fff;
-    font-family: "Poppins";
-    font-size: 30px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    /*Style af teksten i afsnit 1*/
+    .sektion1-tekst {
+      font-family: Poppins;
+      margin-left: 5%;
+      margin-right: 5%;
   }
   
-  /*teksten nedenunder*/
-  .herotekst h2 {
-    color: #FFF;
-    font-family: "Poppins";
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: normal;
+    .sektion1-tekst h2 {
+      font-size: 20px;
+      font-weight: 400;
   }
+  
+    .sektion1-tekst h1 {
+      font-size: 35px;
+      font-weight: 600;
+  }
+  
+    .sektion1-tekst p {
+      font-size: 20px;
+      font-weight: 300;
+  }
+
+  /*Style af afsnit 2*/
+    .sektion2 {
+      display: flex;
+      margin-top: 5%;
+      margin-bottom: 5%;
+      background-color: #2722A4;
+  }
+
+  /*Style af teksten i afsnit 2*/
+    .sektion2-tekst {
+      font-family: Poppins;
+      color: white;
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-top: 5%;
+      margin-bottom: 5%;
+  }
+
+    .sektion2-tekst h1 {
+      font-size: 35px;
+      font-weight: 600;
+  }
+
+    .sektion2-tekst p {
+      font-size: 20px;
+      font-weight: 300;
+  }
+
+  /*Style af billedet i afsnit 2*/
+  .sektion2-billede2{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+  }
+
+  /*Style af afsnit 3*/
+  .sektion3 {
+    display: flex;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+/*Style af teksten i afsnit 3*/
+  .sektion3-tekst {
+    font-family: Poppins;
+    color: black;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+  }
+
+  .sektion3-tekst h1 {
+    font-size: 35px;
+    font-weight: 600;
+  }
+
+  .sektion3-tekst p {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+}
+
