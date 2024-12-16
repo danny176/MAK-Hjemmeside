@@ -139,6 +139,7 @@ body.lock-scroll {
     position: relative;
     padding: 20px 64px;
     background: #f8f8f8;
+    margin: 0;
   }
 
   .headline-button {
