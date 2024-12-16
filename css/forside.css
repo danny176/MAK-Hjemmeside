@@ -22,10 +22,6 @@
     z-index: -1;
 }
 
-.filter {
-
-}
-
 .video-tekst {
     position: absolute;
     /* top: 50%;
@@ -115,6 +111,11 @@ section {
     border: none;
 }
 
+.knap-a-tag {
+    text-decoration: none;
+    color: white;
+}
+
 .træningsprogrammer {
     padding-bottom: 4%;
 }
@@ -156,6 +157,11 @@ section {
     flex-grow: 1;
     justify-content: space-between;
     padding: 3% 4% 3% 4%;
+}
+
+.knap-a-tag-programmer {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
 }
 
 .program h3 {
@@ -337,10 +343,6 @@ section {
     z-index: -1;
 }
 
-.filter {
-
-}
-
 .video-tekst {
     position: absolute;
     /* top: 50%;
@@ -438,6 +440,11 @@ section {
     font-weight: 500;
     text-decoration: none;
     border: none;
+}
+
+.knap-a-tag {
+    text-decoration: none;
+    color: white;
 }
 
 .træningsprogrammer {

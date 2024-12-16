@@ -1,92 +1,99 @@
-// Array of client reviews
-const reviews = [
+// Array med kundevurderinger
+const kundeAnmeldelser = [
     {
-        name: "Jens",
-        quote: "Jeg havde aldrig trænet før, men med Mohammad's hjælp følte jeg mig tryg fra dag et.",
-        stars: 4,
-        image: "images/transformation.png"
+        navn: "Jens",
+        citat: "Jeg havde aldrig trænet før, men med Mohammad's hjælp følte jeg mig tryg fra dag et.",
+        stjerner: 4,
+        billede: "images/transformation.png"
     },
     {
-        name: "Maria",
-        quote: "Mohammad's personlige tilgang har fuldstændig forandret min måde at tænke træning på.",
-        stars: 5,
-        image: "images/transformation.png"
+        navn: "Maria", 
+        citat: "Mohammad's personlige tilgang har fuldstændig forandret min måde at tænke træning på.",
+        stjerner: 5,
+        billede: "images/transformation.png"
     },
     {
-        name: "Lars",
-        quote: "Utroligt professionel træner der virkelig forstår at motivere og guide.",
-        stars: 4,
-        image: "images/transformation.png"
+        navn: "Lars",
+        citat: "Utroligt professionel træner der virkelig forstår at motivere og guide.",
+        stjerner: 4,
+        billede: "images/transformation.png"
     }
 ];
 
-// Current review index
-let currentReviewIndex = 0;
+// Variabel til at holde styr på den aktuelle anmeldelses index
+let anmeldelsesReviewIndex = 0;
 
-// Function to update review content
-function updateReview() {
-    const currentReview = reviews[currentReviewIndex];
+// Funktion til at opdatere anmeldelsesindholdet
+function opdaterAnmeldelse() {
+    // Hent den afbenyttede anmeldelse fra arrayet
+    const aktuelAnmeldelse = kundeAnmeldelser[anmeldelsesReviewIndex];
     
-    // Update desktop version
-    const desktopQuote = document.querySelector('.sektion-anmeldelser .anmeldelser-citat');
-    const desktopName = document.querySelector('.sektion-anmeldelser .anmeldelser-tekst p:last-child');
-    const desktopImage = document.querySelector('.sektion-anmeldelser .anmeldelser-billede');
-    const desktopStars = document.querySelector('.sektion-anmeldelser .anmeldelser-stjerner');
+    // Vælg elementer til desktop-visning
+    const desktopCitat = document.querySelector('.sektion-anmeldelser .anmeldelser-citat');
+    const desktopNavn = document.querySelector('.sektion-anmeldelser .anmeldelser-tekst p:last-child');
+    const desktopBillede = document.querySelector('.sektion-anmeldelser .anmeldelser-billede');
+    const desktopStjerner = document.querySelector('.sektion-anmeldelser .anmeldelser-stjerner');
 
-    // Update mobile version
-    const mobileQuote = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-citat-mobil');
-    const mobileName = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-tekst-mobil p:last-child');
-    const mobileImage = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-billede-mobil');
-    const mobileStars = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-stjerner');
+    // Vælg elementer til mobil-visning
+    const mobilCitat = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-citat-mobil');
+    const mobilNavn = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-tekst-mobil p:last-child');
+    const mobilBillede = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-billede-mobil');
+    const mobilStjerner = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-stjerner');
 
-    // Update quote
-    if (desktopQuote) desktopQuote.textContent = `"${currentReview.quote}"`;
-    if (mobileQuote) mobileQuote.textContent = `"${currentReview.quote}"`;
+    // Opdater citater
+    if (desktopCitat) desktopCitat.textContent = '"' + aktuelAnmeldelse.citat + '"';
+    if (mobilCitat) mobilCitat.textContent = '"' + aktuelAnmeldelse.citat + '"';
 
-    // Update name
-    if (desktopName) desktopName.textContent = `Navn / ${currentReview.name}`;
-    if (mobileName) mobileName.textContent = `Navn / ${currentReview.name}`;
+    // Opdater navne
+    if (desktopNavn) desktopNavn.textContent = aktuelAnmeldelse.navn;
+    if (mobilNavn) mobilNavn.textContent = aktuelAnmeldelse.navn;
 
-    // Update image
-    if (desktopImage) desktopImage.src = currentReview.image;
-    if (mobileImage) mobileImage.src = currentReview.image;
+    // Opdater billeder
+    if (desktopBillede) desktopBillede.src = aktuelAnmeldelse.billede;
+    if (mobilBillede) mobilBillede.src = aktuelAnmeldelse.billede;
 
-    // Update stars
-    function createStarIcons(stars) {
-        let starHtml = '';
+    // Funktion til at oprette stjerne-ikoner
+    function opretStjerneIkoner(stjerner) {
+        let stjerneHtml = '';
+        // Opret 5 stjerner, hvor nogle er udfyldt baseret på anmeldelsesstjerners antal
         for (let i = 0; i < 5; i++) {
-            starHtml += `<img src="ikoner/${i < stars ? 'udfyldtstjerne' : 'tomstjerne'}.svg" alt="Stjerne">`;
+            stjerneHtml += '<img src="ikoner/' + (i < stjerner ? 'udfyldtstjerne' : 'tomstjerne') + '.svg" alt="Stjerne">';
         }
-        return starHtml;
+        return stjerneHtml;
     }
 
-    if (desktopStars) desktopStars.innerHTML = createStarIcons(currentReview.stars);
-    if (mobileStars) mobileStars.innerHTML = createStarIcons(currentReview.stars);
+    // Opdater stjerner
+    if (desktopStjerner) desktopStjerner.innerHTML = opretStjerneIkoner(aktuelAnmeldelse.stjerner);
+    if (mobilStjerner) mobilStjerner.innerHTML = opretStjerneIkoner(aktuelAnmeldelse.stjerner);
 }
 
-// Function to cycle to next review
-function nextReview() {
-    currentReviewIndex = (currentReviewIndex + 1) % reviews.length;
-    updateReview();
+// Funktion til at gå til næste anmeldelse
+function næsteAnmeldelse() {
+    // Brug modulo-operator for at cykle gennem arrayet
+    anmeldelsesReviewIndex = (anmeldelsesReviewIndex + 1) % kundeAnmeldelser.length;
+    opdaterAnmeldelse();
 }
 
-// Function to cycle to previous review
-function previousReview() {
-    currentReviewIndex = (currentReviewIndex - 1 + reviews.length) % reviews.length;
-    updateReview();
+// Funktion til at gå til forrige anmeldelse
+function forrigeAnmeldelse() {
+    // Brug modulo-operator for at cykle gennem arrayet baglæns
+    anmeldelsesReviewIndex = (anmeldelsesReviewIndex - 1 + kundeAnmeldelser.length) % kundeAnmeldelser.length;
+    opdaterAnmeldelse();
 }
 
-// Initialize the review on page load
+// Initialisering når siden indlæses
 document.addEventListener('DOMContentLoaded', () => {
-    updateReview();
+    // Vis første anmeldelse med det samme
+    opdaterAnmeldelse();
 
-    // Optional: Add event listeners for navigation if you want to add navigation buttons
-    const nextButton = document.querySelector('.next-review-button');
-    const prevButton = document.querySelector('.prev-review-button');
+    // Valgfri: Tilføj event listeners til navigationsknapper
+    // const næsteKnap = document.querySelector('.next-review-button');
+    // const forrigeKnap = document.querySelector('.prev-review-button');
 
-    if (nextButton) nextButton.addEventListener('click', nextReview);
-    if (prevButton) prevButton.addEventListener('click', previousReview);
+    // Tilføj klik-events hvis knapperne eksisterer
+    // if (næsteKnap) næsteKnap.addEventListener('click', næsteAnmeldelse);
+    // if (forrigeKnap) forrigeKnap.addEventListener('click', forrigeAnmeldelse);
 
-    // Optional: Auto-rotate reviews every 5 seconds
-    setInterval(nextReview, 5000);
+    // Automatisk rotation af anmeldelser hver 5. sekund
+    setInterval(næsteAnmeldelse, 5000);
 });
