@@ -1,3 +1,5 @@
+//Forside animation
+
 //Kort animation
 gsap.registerPlugin(ScrollTrigger); //Register scrolltrigger plugin fra GSAP
 
@@ -17,6 +19,7 @@ gsap.utils.toArray(".program").forEach(function (program, index) {
   });
 });
 
+//Process animation
 gsap.utils.toArray(".process-trin").forEach(function (program, index) {
   //Laver et array som går igennem alle .program kort og med forEach metoden tilføjer det gsap animationen til hver enkelt kort
   gsap.from(program, {
@@ -33,33 +36,34 @@ gsap.utils.toArray(".process-trin").forEach(function (program, index) {
   });
 });
 
-//Animation til kontakt sektion
+//Kontakt animation
 document.addEventListener("DOMContentLoaded", () => {
   const kontaktSektion = document.querySelector(".kontakt-sektion");
 
-  // Create an IntersectionObserver instance
+
   const observer = new IntersectionObserver(
     (entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          // Add the animate class when the section is in view
+ 
           kontaktSektion.classList.add("animate");
 
-          // Optionally, unobserve after the animation to improve performance
+          
           observer.unobserve(entry.target);
         }
       });
     },
     {
-      root: null, // Use the viewport as the root
-      threshold: 0.5, // Trigger when 50% of the section is visible
+      root: null, 
+      threshold: 0.5, 
     }
   );
 
-  // Observe the kontakt-sektion
+  
   observer.observe(kontaktSektion);
 });
 
+//
 gsap.from(".anmeldelser-tekst", {
   x: -100, // Starter animationen ude til højre med 100px på X-aksen
   opacity: 0, // Starter usynlig

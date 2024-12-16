@@ -33,17 +33,17 @@ body.lock-scroll {
     transition: background-color 0.3s ease; /* Smooth overgang */
   }
 
-/* Baggrundsfarve efter scroll på navbar*/
-.nav-container.scrolled {
-  background-color: rgba(255, 255, 255, 0.5); 
-  backdrop-filter: blur(40px);
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; 
-}
+  /* Baggrundsfarve efter scroll på navbar*/
+  .nav-container.scrolled {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
 
   .right-links a {
     color: white;
     font-family: "Poppins";
-    font-size: 1em;
+    font-size: 1vw;
     font-weight: 500;
     text-decoration: none;
   }
@@ -75,9 +75,9 @@ body.lock-scroll {
   }
 
   /* Sort tekstfarve ved scroll */
-.stagger-link-text.text-dark {
-  color: black;
-}
+  .stagger-link-text.text-dark {
+    color: black;
+  }
 
   .kontakt-knap {
     position: relative;
@@ -117,7 +117,6 @@ body.lock-scroll {
   }
 
   .kontakt-knap:hover span {
-
     transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
 
@@ -267,7 +266,6 @@ body.lock-scroll {
 /* Media query der styler alt til mobil */
 
 @media (max-width: 500px) {
-
   .footer-tekst h3 span {
     color: #000;
     font-family: "Poppins";
@@ -299,7 +297,6 @@ body.lock-scroll {
     align-items: center;
     justify-content: center;
   }
-
 
   .firma-navn img {
     width: 100px;
