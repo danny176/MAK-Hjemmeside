@@ -17,8 +17,6 @@ gsap.utils.toArray(".program").forEach(function (program, index) {
   });
 });
 
-gsap.registerPlugin(ScrollTrigger); //Register scrolltrigger plugin fra GSAP
-
 gsap.utils.toArray(".process-trin").forEach(function (program, index) {
   //Laver et array som går igennem alle .program kort og med forEach metoden tilføjer det gsap animationen til hver enkelt kort
   gsap.from(program, {
@@ -35,6 +33,7 @@ gsap.utils.toArray(".process-trin").forEach(function (program, index) {
   });
 });
 
+//Animation til kontakt sektion 
 document.addEventListener("DOMContentLoaded", () => {
   const kontaktSektion = document.querySelector(".kontakt-sektion");
 
@@ -59,4 +58,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Observe the kontakt-sektion
   observer.observe(kontaktSektion);
+});
+
+gsap.from(".anmeldelser-tekst", {
+  x: -100, // Starter animationen ude til højre med 100px på X-aksen
+  opacity: 0, // Starter usynlig
+  duration: 0.4, // Animationen tager 400ms
+  ease: "power2.out", // Tilføjer en easing kurve
+  scrollTrigger: {
+    trigger: ".anmeldelser-tekst", // Animationen starter, når elementet er synligt i viewport
+    start: "top 80%", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
+});
+
+gsap.from(".intro-tekst", {
+  y: 200, // Starter animationen ude til højre med 100px på X-aksen
+  opacity: 0, // Starter usynlig
+  duration: 0.4, // Animationen tager 400ms
+  ease: "power3.out", // Tilføjer en easing kurve
+  scrollTrigger: {
+    trigger: ".intro-billede-box", // Animationen starter, når elementet er synligt i viewport
+    start: "top 80%", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
 });

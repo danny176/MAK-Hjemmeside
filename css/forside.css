@@ -41,13 +41,8 @@
 
 .video-tekst {
     position: absolute;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-    text-align: center; */
     color: white;
     padding: 15rem 5rem 0rem 5rem;
-    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 75vh;
     display: flex;
@@ -63,13 +58,13 @@
 .video-tekst h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    font-weight: 500;
+    font-weight: 600;
 }
       
 .video-tekst p {
     font-size: 1.2rem;
     line-height: 1.5;
-    font-weight: 200;
+    font-weight: 400;
     width: 44%;
 }
 
@@ -102,7 +97,7 @@ section {
 }
 
 .intro-tekst p {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: 400;
 }
 
@@ -131,10 +126,12 @@ section {
 .knap-a-tag {
     text-decoration: none;
     color: white;
+    font-size: 1.1rem;
 }
 
 .træningsprogrammer {
     padding-bottom: 4%;
+    overflow: hidden;
 }
 
 .træningsprogrammer h2 {
@@ -149,14 +146,13 @@ section {
 }
 
 .program {
-    background-color: #4a00ff;
+    background-color: #2722A4;
     color: #fff;
     flex: 1;
     min-width: 300px;
     border-radius: 3%;
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
     align-self: stretch;
 }
 
@@ -164,8 +160,6 @@ section {
     width: 100%;
     height: auto;
     object-fit: cover;
-    /* display: block;
-    max-width: 100%; */
 }
 
 .program-tekst {
@@ -178,6 +172,7 @@ section {
 
 .knap-a-tag-programmer {
     text-decoration: none;
+    font-size: 1rem;
     color: rgb(0, 0, 0);
 }
 
@@ -235,6 +230,7 @@ section {
 .sektion-forløb {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .billede-forløb-container {
@@ -322,8 +318,18 @@ section {
     font-style: italic;
 }
 
+.fed-skrift-navn {
+    font-weight: 500;
+}
+
 .anmeldelser-tekst p {
     font-size: 20px;
+}
+
+.anmeldelser-stjerner {
+    padding-top: 3vh;
+    display: flex;
+    gap: 6px;
 }
 
 .anmeldelser-billede-box {
