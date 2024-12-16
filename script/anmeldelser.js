@@ -74,12 +74,6 @@ function næsteAnmeldelse() {
     opdaterAnmeldelse();
 }
 
-// Funktion til at gå til forrige anmeldelse
-function forrigeAnmeldelse() {
-    // Brug modulo-operator for at cykle gennem arrayet baglæns
-    anmeldelsesReviewIndex = (anmeldelsesReviewIndex - 1 + kundeAnmeldelser.length) % kundeAnmeldelser.length;
-    opdaterAnmeldelse();
-}
 
 // Initialisering når siden indlæses
 document.addEventListener('DOMContentLoaded', () => {
