@@ -13,8 +13,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/global.css" />
-    <link rel="stylesheet" href="css/kontakt.css" />
+    <link rel="stylesheet" href="css/kontaktmedmodal.css" />
     <script src="/script/globalScript.js" defer></script>
+    <script src="script/modal.js" defer></script>
+    <script src="/script/navbar.js" defer></script>
   </head>
   <body>
     <!--Navigations bar-->
@@ -41,13 +43,13 @@
           <div class="firma-navn-mobile">
             <img src="/images/maklogo.svg" alt="mak-logo" />
           </div>
-          <a href="produktside.html" class="stagger-link">
+          <a href="programmer.html" class="stagger-link">
             <span class="stagger-link-text">Træningsprogrammer</span>
           </a>
-          <a href="vision.html" class="stagger-link">
+          <a href="ommig.html" class="stagger-link">
             <span class="stagger-link-text">Om mig</span>
           </a>
-          <a href="brygning.html" class="kontakt-knap"><span>Kontakt</span></a>
+          <a href="kontakt.html" class="kontakt-knap"><span>Kontakt</span></a>
         </div>
       </nav>
     </div>
@@ -76,6 +78,7 @@
           <div class="kontakt1">
             <label for="firstname">Fornavn</label>
             <input
+            
               type="text"
               id="firstname"
               name="firstname"
@@ -93,12 +96,12 @@
             />
           </div>
           <div class="kontakt2">
-            <label for="email">Email</label>
+            <label for="email">E-mail</label>
             <input
               type="email"
               id="email"
               name="email"
-              placeholder="Indtast din email"
+              placeholder="Indtast din e-mail"
               required
             />
 
@@ -179,7 +182,22 @@
             lang="da"
           ></textarea>
 
-          <button type="submit">Send</button>
+          <button id="sendknap" type="submit">Send</button>
+
+          <div id="modaltak" class="modalet">
+            
+            <div id="modalindhold">
+              
+              <img src="ikoner/xsort.svg" class="lukknap" alt="Luk knap">
+
+              <div id="vikontekst">
+              <img src="ikoner/checkmark.svg" class="vikon" alt="v-ikon">
+
+              <p></p>
+            </div>
+            </div>
+
+          </div>
         </div>
       </form>
     </div>
@@ -188,7 +206,7 @@
     <section class="footer">
       <div class="headline-button">
         <h1>Er du i tvivl? Kontakt mig for en uforpligtende samtale</h1>
-        <a href="#">Kontakt</a>
+        <a href="kontakt.html">Kontakt</a>
       </div>
 
       <div class="container-footer-bottom">
