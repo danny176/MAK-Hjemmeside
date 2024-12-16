@@ -41,8 +41,7 @@ document.addEventListener("scroll", function () {
     logo.src = "/images/maklogosort2.svg";
     // Skifter til sort burgermenu-ikon
     burgerMenuIcon.src = "/ikoner/burgermenuSort.png";
-    // Skifter lukkeikonet
-    closeMenuIcon.src = "/ikoner/xsort.svg";
+    
   } else {
     // Fjerner klassen "scrolled", så navbaren får sin oprindelige baggrund igen
     navbar.classList.remove("scrolled");
@@ -52,8 +51,6 @@ document.addEventListener("scroll", function () {
     logo.src = "/images/maklogo.svg";
     // Skifter tilbage til originalt burgermenu-ikon
     burgerMenuIcon.src = "/ikoner/hamburger.svg";
-    // Skifter tilbage til originalt lukkeikon
-    closeMenuIcon.src = "/ikoner/x.svg";
   }
 
   // Opdater sidste scroll-position
