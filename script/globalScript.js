@@ -39,35 +39,29 @@ window.addEventListener("scroll", () => {
   herobillede.style.transform = `translateY(${scrollPosition * speed}px)`;
 });
 
-//Burger menu
-const menuButton = document.querySelector(".hambruger-menu-knap");
-const rightLinks = document.querySelector(".right-links");
-const burgerIcon = document.querySelector(".burger-icon");
-const closeIcon = document.querySelector(".close-icon");
+// Opretter variabler fra HTML ved hjælp af deres klasser
+const menuButton = document.querySelector(".hambruger-menu-knap"); // Knap der åbner/lukker menuen
+const rightLinks = document.querySelector(".right-links"); // Elementet med menu-links
+const burgerIcon = document.querySelector(".burger-icon"); // Hamburger-ikonet
+const closeIcon = document.querySelector(".close-icon"); // Luk-ikonet
 
-// Gør mobil menu synlig ved at give den en active class, som flytter menuen fra venstre ind i midten af viewporten
-menuButton.addEventListener("click", () => {
-  rightLinks.classList.toggle("active"); // Fjerne eller tilføj 'active' class
-
-  // Skift mellem luk og hambruger ikoner
+// Denne funktion styrer visning af mobilmenuen
+function toggleMenu() {
+  // Tjek om 'active'-klassen allerede er tilføjet, eller om den skal fjernes
   if (rightLinks.classList.contains("active")) {
-    burgerIcon.style.display = "none";
-    closeIcon.style.display = "block";
-    document.body.classList.add("lock-scroll"); // Lås scroll så hamburger menu er fixed
+    // Hvis 'active'-klassen allerede er der, fjernes den for at lukke menuen
+    rightLinks.classList.remove("active");
+    burgerIcon.style.display = "block"; // Vis hamburger-ikonet igen
+    closeIcon.style.display = "none"; // Skjul luk-ikonet
+    document.body.classList.remove("lock-scroll"); // Tillad scrolling igen
   } else {
-    burgerIcon.style.display = "block";
-    closeIcon.style.display = "none";
-    document.body.classList.remove("lock-scroll"); // Lås scroll op igen når hamburger menu er lukket
+    // Hvis 'active'-klassen ikke er der, tilføjes den for at åbne menuen
+    rightLinks.classList.add("active");
+    burgerIcon.style.display = "none"; // Skjul hamburger-ikonet
+    closeIcon.style.display = "block"; // Vis luk-ikonet
+    document.body.classList.add("lock-scroll"); // Lås scroll på siden
   }
-});
+}
 
-// Gsap animation for rundede hjørner
-window.addEventListener('load', () => {  // Lytter efter, at hele siden er indlæst, før animationen starter
-  gsap.to('.herobillede img', {  // Vælger alle billeder indenfor '.herobillede' containeren og forbereder animationen
-    borderBottomLeftRadius: '10%',  // Sætter den nederste venstre radius til 10% af billedets størrelse, skaber en let kurve
-    borderBottomRightRadius: '10%',  // Sætter den nederste højre radius til 10% af billedets størrelse, skaber en let kurve
-    duration: 1,  // Definerer varigheden af animationen til 1 sekund
-    delay: 0.4,  // Angiver en forsinkelse på 0.4 sekunder efter at siden er fuldt indlæst, før animationen starter
-    ease: 'bounce.out',  // Bestemmer animationens easing, 'bounce.out' skaber en hoppende effekt.
-  });
-});
+// Tilføj en klik-begivenhed til menu-knappen/hamburger ikonet, som aktivere min funktion der viser og skjuler navigations menuen.
+menuButton.addEventListener("click", toggleMenu);

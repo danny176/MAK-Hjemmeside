@@ -36,31 +36,6 @@ gsap.utils.toArray(".process-trin").forEach(function (program, index) {
   });
 });
 
-//Kontakt animation
-  const kontaktSektion = document.querySelector(".kontakt-sektion");
-
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
- 
-          kontaktSektion.classList.add("animate");
-
-          
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      root: null, 
-      threshold: 0.5, 
-    }
-  );
-
-  
-  observer.observe(kontaktSektion);
-
 
 //Animation til anmeldelse sektion
 gsap.from(".anmeldelser-tekst", {
@@ -154,30 +129,35 @@ gsap.from(".sektion3", {
 
 //ANIMATION TIL KONTAKT SIDE
 
-//Kontakt animation
-document.addEventListener("DOMContentLoaded", () => {
-  const kontaktSektion = document.querySelector(".kontakt-sektion");
-
-
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
- 
-          kontaktSektion.classList.add("animate");
-
-          
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      root: null, 
-      threshold: 0.5, 
-    }
-  );
-
-  
-  observer.observe(kontaktSektion);
+gsap.from(".billede-kontaktform", {
+  y: 100, // Starter animationen nede fra
+  opacity: 0, // Starter usynlig
+  duration: 0.6, // Animationen tager 400ms
+  ease: "power2.inOut", // Tilføjer en easing kurve
+  scrollTrigger: {
+    markers: true,
+    trigger: ".billede-kontaktform", // Animationen starter, når elementet er synligt i viewport
+    start: "top 95%", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
 });
+
+gsap.fromTo(".vikon", 
+  {
+    y: 50, // Starter nedenfor
+  }, 
+  {
+    y: 0, // Flyt til sin oprindelige position
+    duration: 1, // Animationen tager 2 sekunder
+    ease: "bounce.out", // Tilføjer bounce back easing
+    repeat: -1, // Gentag for evigt
+    repeatDelay: 5, // Vent 5 sekunder før gentagelse
+    scrollTrigger: {
+      markers: true,
+      trigger: ".vikontekst", // Animation starter, når denne er i viewport
+      start: "top 90%", // Start animationen, når toppen er 90% synlig
+      toggleActions: "play none none none", // Spil animationen én gang når synlig
+    },
+  }
+);
 
