@@ -76,13 +76,16 @@ section {
 
 .sektion-intro {
     display: flex;
-    margin-left: 5%;
-    margin-right: 5%;
+    justify-content: space-evenly;
     padding-bottom: 4%;
+    max-width: 1920px;
+    padding-top: 100px;
+    margin: auto;
 }
 
 .intro-tekst {
     font-family: Poppins;
+    max-width: 600px;
 }
 
 .intro-tekst h2 {

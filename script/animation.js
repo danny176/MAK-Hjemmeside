@@ -37,7 +37,6 @@ gsap.utils.toArray(".process-trin").forEach(function (program, index) {
 });
 
 //Kontakt animation
-document.addEventListener("DOMContentLoaded", () => {
   const kontaktSektion = document.querySelector(".kontakt-sektion");
 
 
@@ -61,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   
   observer.observe(kontaktSektion);
-});
+
 
 //Animation til anmeldelse sektion
 gsap.from(".anmeldelser-tekst", {
