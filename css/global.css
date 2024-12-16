@@ -26,11 +26,10 @@ body.lock-scroll {
     top: 0;
     z-index: 2;
     width: 100%; /* Bredde 100% plus 64 px margin */
-    left: 50%;
-    transform: translateX(-50%);
+    left: 0;
     margin: 0;
     background-color: transparent; /* Gennemsigtig baggrund */
-    transition: background-color 0.3s ease; /* Smooth overgang */
+    transition: transform 0.3s ease; /* Glidende effekt for vis/skjul */
   }
 
   /* Baggrundsfarve efter scroll på navbar*/
@@ -331,6 +330,11 @@ body.lock-scroll {
     left: 0;
   }
 
+  .nav-container.scrolled {
+    background-color: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(40px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+  }
   .right-links a {
     color: white;
     font-family: "Poppins";

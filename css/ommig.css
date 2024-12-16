@@ -3,28 +3,6 @@
 /*Style til desktop*/
 @media (min-width: 500px) {
 
-
-
-/*Navbar ændres ved scroll*/
-.nav-container {
-  position: fixed;
-  top: 0;
-  z-index: 2;
-  width: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  background-color: transparent; /* Gennemsigtig baggrund */
-  transition: background-color 0.3s ease; /* Smooth overgang */
-}
-
-/* Baggrundsfarve efter scroll på navbar*/
-.nav-container.scrolled {
-  background-color: rgba(255, 255, 255, 0.5); 
-  backdrop-filter: blur(40px);
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; 
-}
-
 .firma-navn img {
   width: 8vw;
   height: auto;
@@ -210,15 +188,6 @@
   #billede1, #billede2, #billede3{
     display: none;
   }
-
-
-/*Style af navbar scrolled*/
-.nav-container.scrolled {
-  background-color: rgba(255, 255, 255, 0.5); 
-  backdrop-filter: blur(40px);
-  transition: background-color 0.3s ease, backdrop-filter 0.3s ease; 
-}
-
 
   /*Vises alle mobil elementer*/ 
   #sektion1billedemobil, #sektion2billedemobil, #sektion3billedemobil{
