@@ -51,19 +51,18 @@
 }
 
 .video-tekst h2 {
-    font-size: 1rem;
+    font-size: 0.8rem;
     font-weight: 400;
 }
 
 .video-tekst h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 2rem;
+    margin-bottom: 1.5vh;
     font-weight: 600;
 }
       
 .video-tekst p {
-    font-size: 1.2rem;
-    line-height: 1.5;
+    font-size: 1rem;
     font-weight: 400;
     width: 44%;
 }
