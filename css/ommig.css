@@ -184,6 +184,7 @@
     color: black;
     margin-left: 5%;
     margin-bottom: 5%;
+    max-width: 600px;
   }
 
   .sektion3-tekst h1 {

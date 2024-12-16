@@ -25,7 +25,7 @@ document.addEventListener("scroll", function () {
     staggerLinks.forEach((link) => link.classList.add("text-dark"));
 
     // Ændrer logoets kilde (src) til et sort logo
-    logo.src = "/images/maklogosort.png";
+    logo.src = "/images/maklogosort2.svg";
 
     // Skifter til sort burgermenu-ikon
     burgerMenuIcon.src = "/ikoner/burgermenuSort.png";
