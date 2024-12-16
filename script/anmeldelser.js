@@ -10,13 +10,13 @@ const kundeAnmeldelser = [
         navn: "Maria", 
         citat: "Mohammad's personlige tilgang har fuldstændig forandret min måde at tænke træning på.",
         stjerner: 5,
-        billede: "images/transformation.png"
+        billede: "images/transformationsbilledetre.png"
     },
     {
         navn: "Lars",
         citat: "Utroligt professionel træner der virkelig forstår at motivere og guide.",
         stjerner: 4,
-        billede: "images/transformation.png"
+        billede: "images/transformationsbilledeto.png"
     }
 ];
 
