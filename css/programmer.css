@@ -117,11 +117,13 @@ width: auto;
 
   .kontaktknap:hover:after {
     transform: translate(-50%, -50%); /* Flyt fyld figuren ind i viewport */
+    cursor: pointer;
   }
 
   .kontaktknap:hover span {
     color: #FFF;
     transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    cursor: pointer;
   }
 
   #kickbilledelil, #rytmenbilledelil, #powerbilledelil {
