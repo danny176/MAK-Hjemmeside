@@ -10,14 +10,13 @@
     height: auto;
     object-fit: cover;
     object-position: center;
-    filter: grayscale(100%) brightness(1.2);
     transform: translateY(0);
     will-change: transform;
   }
 
   .herotekst {
     position: absolute;
-    top: 45vh;
+    top: 50vh;
     left: 0;
     margin-left: 64px;
     display: flex;
@@ -29,7 +28,7 @@
   .herotekst h1 {
     color: #fff;
     font-family: Poppins;
-    font-size: 4vw;
+    font-size: 2vw;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

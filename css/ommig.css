@@ -75,25 +75,31 @@
     .herotekst h1 {
       color: #fff;
       font-family: "Poppins";
-      font-size: 30px;
+      font-size: 2rem;
       font-style: normal;
-      font-weight: 400;
-      line-height: normal;
+      font-weight: 600;
+    }
+
+    #billede1 {
+      width: 30vw;
+      height: auto;
     }
     
     /*teksten nedenunder*/
     .herotekst h2 {
       color: #FFF;
       font-family: "Poppins";
-      font-size: 16px;
+      font-size: 1rem;
       font-style: normal;
-      font-weight: 300;
+      font-weight: 400;
       line-height: normal;
     }
 
   /*Style af afsnit 1*/
     .sektion1 {
       display: flex;
+      justify-content: space-evenly;
+      align-items: center;
       margin-left: 5%;
       margin-right: 5%;
       margin-top: 5%;
@@ -103,26 +109,29 @@
     .sektion1-tekst {
       font-family: Poppins;
       margin-left: 5%;
+      max-width: 600px;
   }
   
     .sektion1-tekst h2 {
-      font-size: 20px;
+      font-size: 0.8rem;
       font-weight: 400;
   }
   
     .sektion1-tekst h1 {
-      font-size: 35px;
+      font-size: 2rem;
       font-weight: 600;
   }
   
     .sektion1-tekst p {
-      font-size: 20px;
-      font-weight: 300;
+      font-size: 1rem;
+      font-weight: 400;
   }
 
   /*Style af afsnit 2*/
     .sektion2 {
       display: flex;
+      justify-content: space-evenly;
+      align-items: center;
       margin-top: 5%;
       margin-bottom: 5%;
       background-color: #2722A4;
@@ -136,17 +145,18 @@
       margin-top: 5%;
       margin-bottom: 5%;
       margin-right: 5%;
-      max-width: 40%;
+      max-width: 600px;
+    
      
   }
 
     .sektion2-tekst h1 {
-      font-size: 35px;
+      font-size: 2rem;
       font-weight: 600;
   }
 
     .sektion2-tekst p {
-      font-size: 20px;
+      font-size: 1rem;
       font-weight: 300;
   }
 
@@ -160,6 +170,8 @@
   /*Style af afsnit 3*/
   .sektion3 {
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
     margin-top: 5%;
     margin-bottom: 5%;
     margin-left: 5%;
@@ -171,18 +183,17 @@
     font-family: Poppins;
     color: black;
     margin-left: 5%;
-    
     margin-bottom: 5%;
   }
 
   .sektion3-tekst h1 {
-    font-size: 35px;
+    font-size: 2rem;
     font-weight: 600;
   }
 
   .sektion3-tekst p {
-    font-size: 20px;
-    font-weight: 300;
+    font-size: 1rem;
+    font-weight: 400;
   }
 
   /*Skjules alle mobil elementer*/

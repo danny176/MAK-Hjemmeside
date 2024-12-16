@@ -33,7 +33,7 @@ gsap.utils.toArray(".process-trin").forEach(function (program, index) {
   });
 });
 
-//Animation til kontakt sektion 
+//Animation til kontakt sektion
 document.addEventListener("DOMContentLoaded", () => {
   const kontaktSektion = document.querySelector(".kontakt-sektion");
 
@@ -80,6 +80,68 @@ gsap.from(".intro-tekst", {
   scrollTrigger: {
     trigger: ".intro-billede-box", // Animationen starter, når elementet er synligt i viewport
     start: "top 80%", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
+});
+
+gsap.from(".program1", {
+  y: 100, // Starter animationen ude til højre med 100px på X-aksen
+  opacity: 0, // Starter usynlig
+  duration: 0.7, // Animationen tager 400ms
+  ease: "back.inOut", // Tilføjer en easing kurve
+  scrollTrigger: {
+    trigger: ".program1", // Animationen starter, når elementet er synligt i viewport
+    start: "top 70%", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
+});
+
+gsap.from(".program2", {
+  y: 100, // Starter animationen ude til højre med 100px på X-aksen
+  opacity: 0, // Starter usynlig
+  duration: 0.7, // Animationen tager 400ms
+  ease: "back.inOut", // Tilføjer en easing kurve
+  scrollTrigger: {
+    trigger: ".program2", // Animationen starter, når elementet er synligt i viewport
+    start: "top bottom", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
+});
+
+gsap.from(".program3", {
+  y: 100, // Starter animationen ude til højre med 100px på X-aksen
+  opacity: 0, // Starter usynlig
+  duration: 0.7, // Animationen tager 400ms
+  ease: "back.inOut", // Tilføjer en easing kurve
+  scrollTrigger: {
+    trigger: ".program3", // Animationen starter, når elementet er synligt i viewport
+    start: "top bottom", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
+});
+
+gsap.from(".sektion2", {
+  y: 100, // Starter animationen ude til højre med 100px på X-aksen
+  opacity: 0, // Starter usynlig
+  duration: 0.6, // Animationen tager 400ms
+  ease: "power4.inOut", // Tilføjer en easing kurve
+  scrollTrigger: {
+    markers: true,
+    trigger: ".sektion2", // Animationen starter, når elementet er synligt i viewport
+    start: "top 95%", // Starter animationen, når 20% af toppen er synlig
+    toggleActions: "play none none none", // Spil animationen én gang
+  },
+});
+
+gsap.from(".sektion3", {
+  x: -100, // Starter animationen ude til højre med 100px på X-aksen
+  opacity: 0, // Starter usynlig
+  duration: 0.6, // Animationen tager 400ms
+  ease: "power2.inOut", // Tilføjer en easing kurve
+  scrollTrigger: {
+    markers: true,
+    trigger: ".sektion3", // Animationen starter, når elementet er synligt i viewport
+    start: "top 95%", // Starter animationen, når 20% af toppen er synlig
     toggleActions: "play none none none", // Spil animationen én gang
   },
 });
