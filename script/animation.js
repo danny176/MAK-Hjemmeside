@@ -34,3 +34,29 @@ gsap.utils.toArray(".process-trin").forEach(function (program, index) {
     },
   });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+  const kontaktSektion = document.querySelector(".kontakt-sektion");
+
+  // Create an IntersectionObserver instance
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          // Add the animate class when the section is in view
+          kontaktSektion.classList.add("animate");
+
+          // Optionally, unobserve after the animation to improve performance
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null, // Use the viewport as the root
+      threshold: 0.5, // Trigger when 50% of the section is visible
+    }
+  );
+
+  // Observe the kontakt-sektion
+  observer.observe(kontaktSektion);
+});
