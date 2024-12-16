@@ -1,4 +1,16 @@
 @media (min-width: 500px) {
+  .billede-kontaktform {
+    transform: translateY(100px); /* Start below its normal position */
+    opacity: 0; /* Start fully transparent */
+    transition: transform 1s cubic-bezier(0.25, 0.8, 0.25, 1),
+      opacity 1s cubic-bezier(0.25, 0.8, 0.25, 1); /* Add easing and duration */
+  }
+
+  .billede-kontaktform.animate {
+    transform: translateY(0); /* Move to its normal position */
+    opacity: 1; /* Fade in */
+  }
+
   .herobillede {
     width: 100%;
     height: 90;
@@ -446,4 +458,3 @@
     display: none;
   }
 }
-

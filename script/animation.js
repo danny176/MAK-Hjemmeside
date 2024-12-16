@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(kontaktSektion);
 });
 
-//
+//Animation til anmeldelse sektion
 gsap.from(".anmeldelser-tekst", {
   x: -100, // Starter animationen ude til højre med 100px på X-aksen
   opacity: 0, // Starter usynlig
@@ -76,6 +76,7 @@ gsap.from(".anmeldelser-tekst", {
   },
 });
 
+//Animation til introduktions teksten
 gsap.from(".intro-tekst", {
   y: 200, // Starter animationen ude til højre med 100px på X-aksen
   opacity: 0, // Starter usynlig
@@ -87,6 +88,8 @@ gsap.from(".intro-tekst", {
     toggleActions: "play none none none", // Spil animationen én gang
   },
 });
+
+//ANIMATION TIL PROGRAMMER SIDE
 
 gsap.from(".program1", {
   y: 100, // Starter animationen ude til højre med 100px på X-aksen
@@ -124,13 +127,14 @@ gsap.from(".program3", {
   },
 });
 
+//ANIMATION TIL OM MIG SIDE
+
 gsap.from(".sektion2", {
   y: 100, // Starter animationen ude til højre med 100px på X-aksen
   opacity: 0, // Starter usynlig
   duration: 0.6, // Animationen tager 400ms
   ease: "power4.inOut", // Tilføjer en easing kurve
   scrollTrigger: {
-    markers: true,
     trigger: ".sektion2", // Animationen starter, når elementet er synligt i viewport
     start: "top 95%", // Starter animationen, når 20% af toppen er synlig
     toggleActions: "play none none none", // Spil animationen én gang
@@ -143,9 +147,38 @@ gsap.from(".sektion3", {
   duration: 0.6, // Animationen tager 400ms
   ease: "power2.inOut", // Tilføjer en easing kurve
   scrollTrigger: {
-    markers: true,
     trigger: ".sektion3", // Animationen starter, når elementet er synligt i viewport
     start: "top 95%", // Starter animationen, når 20% af toppen er synlig
     toggleActions: "play none none none", // Spil animationen én gang
   },
 });
+
+//ANIMATION TIL KONTAKT SIDE
+
+//Kontakt animation
+document.addEventListener("DOMContentLoaded", () => {
+  const kontaktSektion = document.querySelector(".kontakt-sektion");
+
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+ 
+          kontaktSektion.classList.add("animate");
+
+          
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      root: null, 
+      threshold: 0.5, 
+    }
+  );
+
+  
+  observer.observe(kontaktSektion);
+});
+
