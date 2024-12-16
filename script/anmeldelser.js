@@ -74,25 +74,10 @@ function næsteAnmeldelse() {
     opdaterAnmeldelse();
 }
 
-// Funktion til at gå til forrige anmeldelse
-function forrigeAnmeldelse() {
-    // Brug modulo-operator for at cykle gennem arrayet baglæns
-    anmeldelsesReviewIndex = (anmeldelsesReviewIndex - 1 + kundeAnmeldelser.length) % kundeAnmeldelser.length;
-    opdaterAnmeldelse();
-}
-
 // Initialisering når siden indlæses
 document.addEventListener('DOMContentLoaded', () => {
     // Vis første anmeldelse med det samme
     opdaterAnmeldelse();
-
-    // Valgfri: Tilføj event listeners til navigationsknapper
-    // const næsteKnap = document.querySelector('.next-review-button');
-    // const forrigeKnap = document.querySelector('.prev-review-button');
-
-    // Tilføj klik-events hvis knapperne eksisterer
-    // if (næsteKnap) næsteKnap.addEventListener('click', næsteAnmeldelse);
-    // if (forrigeKnap) forrigeKnap.addEventListener('click', forrigeAnmeldelse);
 
     // Automatisk rotation af anmeldelser hver 5. sekund
     setInterval(næsteAnmeldelse, 5000);
