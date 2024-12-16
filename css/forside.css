@@ -353,7 +353,7 @@ section {
     font-family: Poppins;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 499px) {
 
 /* VIDEO SEKTION */
 .video-box {
@@ -479,6 +479,7 @@ section {
 
 .træningsprogrammer {
     padding-bottom: 4%;
+    overflow: hidden;
 }
 
 .træningsprogrammer h2 {
@@ -494,7 +495,7 @@ section {
 }
 
 .program {
-    background-color: #4a00ff;
+    background-color: #2722A4;
     color: #fff;
     flex: 1;
     min-width: 300px;
@@ -552,7 +553,7 @@ section {
     z-index: 2;
     color: rgb(0, 0, 0);
     font-family: "Poppins";
-    font-size: 1.3em;
+    font-size: 1em;
     font-weight: 500;
     text-decoration: none;
     border: none;
@@ -576,6 +577,7 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .billede-forløb-container {
