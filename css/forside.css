@@ -326,6 +326,11 @@ section {
     font-size: 20px;
 }
 
+.anmeldelser-billede-box {
+    width: 45%;
+    height: 75vh;
+}
+
 .anmeldelser-billede {
     width: 100%;
 }
@@ -662,6 +667,11 @@ section {
     font-size: 1rem;
     display: flex;
     justify-content: center;
+}
+
+.anmeldelser-billede-box {
+    width: 45%;
+    height: 75vh;
 }
 
 .anmeldelser-billede-mobil {
