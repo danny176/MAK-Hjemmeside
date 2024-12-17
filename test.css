@@ -1,0 +1,49 @@
+
+.program-knap {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #2722a4;
+    z-index: 0;
+    color: white;
+    font-family: "Poppins";
+    font-size: 1.3em;
+    font-weight: 500;
+    text-decoration: none;
+    border: none;
+}
+
+.knap-a-tag-programmer {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.program-knap:hover a {
+    color: white;
+}
+
+  .program-knap:after /* Fylde figur til kontakt knap hover effekt */ {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: -1;
+    width: 150%;
+    height: 150%;
+    border-radius: 40%;
+    background-color: #fc0e47; /* farve fyld */
+    transform: translate(-50%, 50%); /* Put fylde figuren under knappen */
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .program-knap:hover:after {
+    transform: translate(-50%, -50%); /* Flyt fyld figuren ind i viewport */
+    cursor: pointer;
+  }
