@@ -1,4 +1,4 @@
-// Variabler - fra HTML
+// Variabler - fra HTML 
 const modal = document.getElementById("modaltak"); //Selve modallet 
 const knap = document.getElementById("sendknap"); //Send knappen
 const luk = document.getElementsByClassName("lukknap")[0]; //Luk knappen
