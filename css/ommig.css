@@ -2,144 +2,138 @@
 
 /*Style til desktop*/
 @media (min-width: 500px) {
+  .firma-navn img {
+    width: 8vw;
+    height: auto;
+    margin-left: 30%;
+  }
 
-.firma-navn img {
-  width: 8vw;
-  height: auto;
-  margin-left: 30%;
-}
+  .kontakt-knap {
+    position: relative;
+    display: inline-block;
+    padding: 14px 28px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #2722a4;
+    margin-left: 34px;
+    margin-right: 30px;
+    z-index: 2;
+    overflow: hidden;
+  }
 
-.kontakt-knap {
-  position: relative;
-  display: inline-block;
-  padding: 14px 28px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 10px;
-  background: #2722a4;
-  margin-left: 34px;
-  margin-right: 30px;
-  z-index: 2;
-  overflow: hidden;
-}
+  /* Standard farve for stagger-link-text */
+  .stagger-link-text {
+    color: white;
+    transition: color 0.3s ease; /* Glat farveovergang */
+  }
 
-/* Standard farve for stagger-link-text */
-.stagger-link-text {
-  color: white;
-  transition: color 0.3s ease; /* Glat farveovergang */
-}
-
-/* Sort tekstfarve ved scroll */
-.stagger-link-text.text-dark {
-  color: black;
-}
-
-
-
+  /* Sort tekstfarve ved scroll */
+  .stagger-link-text.text-dark {
+    color: black;
+  }
 
   /*Teksten på billedet øverst*/
   .herotekst {
-      position: absolute;
-      top: 50vh;
-      left: 0;
-      margin-left: 64px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      max-width: 600px;
-    }
-  
-    /*overskriften*/
-    .herotekst h1 {
-      color: #fff;
-      font-family: "Poppins";
-      font-size: 2rem;
-      font-style: normal;
-      font-weight: 600;
-    }
+    position: absolute;
+    top: 50vh;
+    left: 0;
+    margin-left: 64px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 600px;
+  }
 
-    #billede1 {
-      width: 30vw;
-      height: auto;
-    }
-    
-    /*teksten nedenunder*/
-    .herotekst h2 {
-      color: #FFF;
-      font-family: "Poppins";
-      font-size: 1rem;
-      font-style: normal;
-      font-weight: 400;
-      line-height: normal;
-    }
+  /*overskriften*/
+  .herotekst h1 {
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  #billede1 {
+    width: 30vw;
+    height: auto;
+  }
+
+  /*teksten nedenunder*/
+  .herotekst h2 {
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
 
   /*Style af afsnit 1*/
-    .sektion1 {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-left: 5%;
-      margin-right: 5%;
-      margin-top: 5%;
-      margin-bottom: 5%;
+  .sektion1 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
   }
-    /*Style af teksten i afsnit 1*/
-    .sektion1-tekst {
-      font-family: Poppins;
-      margin-left: 5%;
-      max-width: 600px;
+  /*Style af teksten i afsnit 1*/
+  .sektion1-tekst {
+    font-family: Poppins;
+    margin-left: 5%;
+    max-width: 600px;
   }
-  
-    .sektion1-tekst h2 {
-      font-size: 0.8rem;
-      font-weight: 400;
+
+  .sektion1-tekst h2 {
+    font-size: 0.8rem;
+    font-weight: 400;
   }
-  
-    .sektion1-tekst h1 {
-      font-size: 2rem;
-      font-weight: 600;
+
+  .sektion1-tekst h1 {
+    font-size: 2rem;
+    font-weight: 600;
   }
-  
-    .sektion1-tekst p {
-      font-size: 1rem;
-      font-weight: 400;
+
+  .sektion1-tekst p {
+    font-size: 1rem;
+    font-weight: 400;
   }
 
   /*Style af afsnit 2*/
-    .sektion2 {
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      margin-top: 5%;
-      margin-bottom: 5%;
-      background-color: #2722A4;
+  .sektion2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    background-color: #2722a4;
   }
 
   /*Style af teksten i afsnit 2*/
-    .sektion2-tekst {
-      font-family: Poppins;
-      color: white;
-      margin-left: 5%;
-      margin-top: 5%;
-      margin-bottom: 5%;
-      margin-right: 5%;
-      max-width: 600px;
-    
-     
+  .sektion2-tekst {
+    font-family: Poppins;
+    color: white;
+    margin-left: 5%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 5%;
+    max-width: 600px;
   }
 
-    .sektion2-tekst h1 {
-      font-size: 2rem;
-      font-weight: 600;
+  .sektion2-tekst h1 {
+    font-size: 2rem;
+    font-weight: 600;
   }
 
-    .sektion2-tekst p {
-      font-size: 1rem;
-      font-weight: 300;
+  .sektion2-tekst p {
+    font-size: 1rem;
+    font-weight: 300;
   }
 
   /*Style af billedet i afsnit 2*/
-  #billede2{
+  #billede2 {
     width: 95%;
     margin-top: 10%;
     margin-bottom: 5%;
@@ -156,7 +150,7 @@
     margin-right: 5%;
   }
 
-/*Style af teksten i afsnit 3*/
+  /*Style af teksten i afsnit 3*/
   .sektion3-tekst {
     font-family: Poppins;
     color: black;
@@ -176,28 +170,33 @@
   }
 
   /*Skjules alle mobil elementer*/
-  #sektion1billedemobil, #sektion2billedemobil, #sektion3billedemobil{
+  #sektion1billedemobil,
+  #sektion2billedemobil,
+  #sektion3billedemobil {
     display: none;
   }
 }
 
 /*Style til mobil*/
 @media (max-width: 500px) {
-
   /*Skjules alle desktop elementer*/
-  #billede1, #billede2, #billede3{
+  #billede1,
+  #billede2,
+  #billede3 {
     display: none;
   }
 
-  /*Vises alle mobil elementer*/ 
-  #sektion1billedemobil, #sektion2billedemobil, #sektion3billedemobil{
+  /*Vises alle mobil elementer*/
+  #sektion1billedemobil,
+  #sektion2billedemobil,
+  #sektion3billedemobil {
     display: block;
   }
 
   /*Style af hero sektion*/
   .herobillede {
     width: 100%;
-    height: 90;
+    height: 90vh;
     overflow: hidden;
   }
 
@@ -219,7 +218,6 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
   }
 
   /*overskriften*/
@@ -231,10 +229,10 @@
     font-weight: 400;
     line-height: normal;
   }
-  
+
   /*teksten nedenunder*/
   .herotekst h2 {
-    color: #FFF;
+    color: #fff;
     font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
@@ -274,7 +272,7 @@
   }
 
   /*Style af billedet afsnit 1*/
-  #sektion1billedemobil{
+  #sektion1billedemobil {
     width: 100%;
     height: auto;
   }
@@ -284,13 +282,13 @@
     display: flex;
     margin-top: 5%;
     margin-bottom: 5%;
-    background-color: #2722A4;
+    background-color: #2722a4;
   }
 
   /*Style af tekst afsnit 2*/
   .sektion2-tekst {
     font-family: Poppins;
-    color: #FFF;
+    color: #fff;
     font-family: Poppins;
     margin-left: 5%;
     margin-right: 5%;
@@ -313,7 +311,7 @@
   }
 
   /*Style af billedet i afsnit 2*/
-  #sektion2billedemobil{
+  #sektion2billedemobil {
     width: 90%;
     height: auto;
     margin-left: 5%;
@@ -345,11 +343,10 @@
     margin-left: 5%;
     margin-right: 5%;
     margin-bottom: 5%;
-    
   }
 
   /*Style af billedet i afsnit 3*/
-  #sektion3billedemobil{
+  #sektion3billedemobil {
     height: auto;
     width: 90%;
     margin-left: 5%;

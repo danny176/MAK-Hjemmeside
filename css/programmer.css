@@ -1,10 +1,9 @@
 /*Programmer style*/
 
-
 /*Style til desktop*/
 @media (min-width: 500px) {
-/*Teksten på billedet øverst*/
-.herotekst {
+  /*Teksten på billedet øverst*/
+  .herotekst {
     position: absolute;
     top: 50vh;
     left: 0;
@@ -24,10 +23,10 @@
     font-weight: 600;
     line-height: normal;
   }
-  
+
   /*teksten nedenunder*/
   .herotekst h2 {
-    color: #FFF;
+    color: #fff;
     font-family: "Poppins";
     font-size: 1rem;
     font-style: normal;
@@ -65,22 +64,21 @@
     font-size: 1.7rem;
   }
 
-/*billede i programmer style*/
+  /*billede i programmer style*/
   #kickbillede {
- height: 450px;
- width: auto;
+    height: 450px;
+    width: auto;
   }
 
   #powerbillede {
-height: 550px;
-width: auto;
+    height: 550px;
+    width: auto;
   }
 
   #rytmenbillede {
     height: 550px;
     width: auto;
   }
-  
 
   /*Kontaktknappen på de forskellige pakker*/
   .kontaktknap {
@@ -90,7 +88,7 @@ width: auto;
     border-style: none;
     float: right;
     position: relative;
-    background:#FFF;
+    background: #fff;
     z-index: 2;
     overflow: hidden;
   }
@@ -121,31 +119,35 @@ width: auto;
   }
 
   .kontaktknap:hover span {
-    color: #FFF;
+    color: #fff;
     transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
     cursor: pointer;
   }
 
-  #kickbilledelil, #rytmenbilledelil, #powerbilledelil {
+  #kickbilledelil,
+  #rytmenbilledelil,
+  #powerbilledelil {
     display: none;
   }
-
 }
 
 /*Style til mobil*/
 @media (max-width: 500px) {
-
-  #kickbilledelil, #rytmenbilledelil, #powerbilledelil {
+  #kickbilledelil,
+  #rytmenbilledelil,
+  #powerbilledelil {
     display: block;
   }
 
-  #kickbillede, #rytmenbillede, #powerbillede {
+  #kickbillede,
+  #rytmenbillede,
+  #powerbillede {
     display: none;
   }
 
   .herobillede {
     width: 100%;
-    height: 90;
+    height: 90vh;
     overflow: hidden;
   }
 
@@ -166,7 +168,6 @@ width: auto;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    
   }
 
   /*overskriften*/
@@ -178,10 +179,10 @@ width: auto;
     font-weight: 400;
     line-height: normal;
   }
-  
+
   /*teksten nedenunder*/
   .herotekst h2 {
-    color: #FFF;
+    color: #fff;
     font-family: "Poppins";
     font-size: 16px;
     font-style: normal;
@@ -220,22 +221,22 @@ width: auto;
     font-size: 1.7rem;
   }
 
-/*billede i programmer style*/
+  /*billede i programmer style*/
   #kickbillede {
-   height: 350px;
-   width: auto;
+    height: 350px;
+    width: auto;
   }
 
   #powerbillede {
-   height: 350px;
-   width: auto;
+    height: 350px;
+    width: auto;
   }
 
   #rytmenbillede {
-   height: 400px;
-   width: auto;
+    height: 400px;
+    width: auto;
   }
-  
+
   /*Kontaktknappen på de forskellige pakker*/
   .kontaktknap {
     padding: 15px 30px;
@@ -244,7 +245,7 @@ width: auto;
     border-style: none;
     float: left;
     position: relative;
-    background:#FFF;
+    background: #fff;
     z-index: 2;
     overflow: hidden;
   }
@@ -274,8 +275,7 @@ width: auto;
   }
 
   .kontaktknap:hover span {
-    color: #FFF;
+    color: #fff;
     transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
   }
-
 }
