@@ -2,7 +2,7 @@
 const modal = document.getElementById("modaltak"); //Selve modallet 
 const knap = document.getElementById("sendknap"); //Send knappen
 const luk = document.getElementsByClassName("lukknap")[0]; //Luk knappen
-const modaltekst = document.querySelector("#vikontekst p"); // Tekst i modalet
+const modaltekst = document.getElementById("tekstmodal"); // Tekst i modalet
 const firstnameInput = document.getElementById("firstname"); // Fornavn input
 const lastnameInput = document.getElementById("lastname"); // Efternavn input
 const emailInput = document.getElementById("email"); // E-mail input
