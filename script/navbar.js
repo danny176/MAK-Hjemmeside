@@ -16,8 +16,6 @@ document.addEventListener("scroll", function () {
   const burgerIcon = document.querySelector("burger-icon");
   // Tilføjer den sorte burgermenu
   const burgerMenuIcon = document.querySelector(".burger-icon");
-  // Finder burgermenu-ikonet
-  const closeMenuIcon = document.querySelector(".close-icon");
 
   // Henter den aktuelle scroll-position
   const currentScrollY = window.scrollY;
