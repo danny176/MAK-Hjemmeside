@@ -7,7 +7,7 @@ const kundeAnmeldelser = [
         billede: "images/transformation.png"
     },
     {
-        navn: "Maria", 
+        navn: "Susanne", 
         citat: "Mohammad's personlige tilgang har fuldstændig forandret min måde at tænke træning på.",
         stjerner: 5,
         billede: "images/transformationsbilledetre.png"
