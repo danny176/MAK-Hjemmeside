@@ -63,6 +63,28 @@ gsap.from(".intro-tekst", {
   },
 });
 
+//Animation til kontakt CTA
+
+gsap.fromTo(".kontakt-sektion", 
+  {
+    y: 50, // Starter nedenfor
+    opacity: 0,
+  }, 
+  {
+    y: 0, // Flyt til sin oprindelige position
+    opacity: 1,
+    duration: 0.4, // Animationen tager 2 sekunder
+    ease: "back.out", // Tilføjer bounce back easing
+    repeat: -1, // Gentag for evigt
+    repeatDelay: 5, // Vent 5 sekunder før gentagelse
+    scrollTrigger: {
+      trigger: ".kontakt-sektion", // Animation starter, når denne er i viewport
+      start: "top 90%", // Start animationen, når toppen er 90% synlig
+      toggleActions: "play none none none", // Spil animationen én gang når synlig
+    },
+  }
+);
+
 //ANIMATION TIL PROGRAMMER SIDE
 
 gsap.from(".program1", {
@@ -135,7 +157,6 @@ gsap.from(".billede-kontaktform", {
   duration: 0.6, // Animationen tager 400ms
   ease: "power2.inOut", // Tilføjer en easing kurve
   scrollTrigger: {
-    markers: true,
     trigger: ".billede-kontaktform", // Animationen starter, når elementet er synligt i viewport
     start: "top 95%", // Starter animationen, når 20% af toppen er synlig
     toggleActions: "play none none none", // Spil animationen én gang
@@ -153,7 +174,6 @@ gsap.fromTo(".vikon",
     repeat: -1, // Gentag for evigt
     repeatDelay: 5, // Vent 5 sekunder før gentagelse
     scrollTrigger: {
-      markers: true,
       trigger: ".vikontekst", // Animation starter, når denne er i viewport
       start: "top 90%", // Start animationen, når toppen er 90% synlig
       toggleActions: "play none none none", // Spil animationen én gang når synlig
