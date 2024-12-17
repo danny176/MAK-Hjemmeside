@@ -185,6 +185,41 @@
     line-height: normal;
   }
 
+  .besked-send button {
+    position: relative;
+    overflow: hidden;
+}
+
+.besked-send button span {
+    position: relative;
+    z-index: 2;
+}
+
+.besked-send button:after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 1;
+    width: 150%;
+    height: 150%;
+    border-radius: 40%;
+    background-color: #fc0e47; /* Accent color for hover fill */
+    transform: translate(-50%, 50%);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.besked-send button:hover:after {
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+.besked-send button:hover span {
+    color: #FFF;
+    transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
+    cursor: pointer;
+}
+  
   .radio-group input[type="radio"] {
     display: none;
   }
