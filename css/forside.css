@@ -116,7 +116,7 @@ section {
     align-items: center;
     border-radius: 10px;
     background: #2722a4;
-    z-index: 2;
+    z-index: 1;
     color: white;
     font-family: "Poppins";
     font-size: 1.3em;
@@ -129,7 +129,32 @@ section {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
+    z-index: 2;
+    position: relative;
 }
+
+.intro-knap:hover a {
+    color: white;
+}
+
+  .intro-knap:after /* Fylde figur til kontakt knap hover effekt */ {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    width: 150%;
+    height: 150%;
+    border-radius: 40%;
+    background-color: #fc0e47; /* farve fyld */
+    transform: translate(-50%, 50%); /* Put fylde figuren under knappen */
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .intro-knap:hover:after {
+    transform: translate(-50%, -50%); /* Flyt fyld figuren ind i viewport */
+    cursor: pointer;
+  }
 
 .træningsprogrammer {
     padding-bottom: 4%;
@@ -176,7 +201,41 @@ section {
     text-decoration: none;
     font-size: 1rem;
     color: rgb(0, 0, 0);
+    position: relative;
+    z-index: 1;
 }
+
+
+.knap-a-tag {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.program-knap:hover a {
+    color: white;
+}
+
+  .program-knap:after /* Fylde figur til kontakt knap hover effekt */ {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    width: 150%;
+    height: 150%;
+    border-radius: 40%;
+    background-color: #fc0e47; /* farve fyld */
+    transform: translate(-50%, 50%); /* Put fylde figuren under knappen */
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .program-knap:hover:after {
+    transform: translate(-50%, -50%); /* Flyt fyld figuren ind i viewport */
+    cursor: pointer;
+  }
 
 .program h3 {
     /* padding-top: 4%;
@@ -288,7 +347,7 @@ section {
     align-items: center;
     border-radius: 10px;
     background: #2722a4;
-    z-index: 2;
+    z-index: 1;
     color: white;
     font-family: "Poppins";
     font-size: 1.3em;
@@ -296,6 +355,38 @@ section {
     text-decoration: none;
     border: none;
 }
+
+
+.knap-a-tag {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1rem;
+    z-index: 2;
+    position: relative;
+}
+
+.sektion-kontakt-knap:hover a {
+    color: white;
+}
+
+  .sektion-kontakt-knap:after /* Fylde figur til kontakt knap hover effekt */ {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    width: 150%;
+    height: 150%;
+    border-radius: 40%;
+    background-color: #fc0e47; /* farve fyld */
+    transform: translate(-50%, 50%); /* Put fylde figuren under knappen */
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  .sektion-kontakt-knap:hover:after {
+    transform: translate(-50%, -50%); /* Flyt fyld figuren ind i viewport */
+    cursor: pointer;
+  }
 
 .sektion-anmeldelser {
     background-color: #2722a4;
