@@ -63,6 +63,28 @@ gsap.from(".intro-tekst", {
   },
 });
 
+//Animation til kontakt CTA
+
+gsap.fromTo(".kontakt-sektion", 
+  {
+    y: 50, // Starter nedenfor
+    opacity: 0,
+  }, 
+  {
+    y: 0, // Flyt til sin oprindelige position
+    opacity: 1,
+    duration: 0.4, // Animationen tager 2 sekunder
+    ease: "back.out", // Tilføjer bounce back easing
+    repeat: -1, // Gentag for evigt
+    repeatDelay: 5, // Vent 5 sekunder før gentagelse
+    scrollTrigger: {
+      trigger: ".kontakt-sektion", // Animation starter, når denne er i viewport
+      start: "top 90%", // Start animationen, når toppen er 90% synlig
+      toggleActions: "play none none none", // Spil animationen én gang når synlig
+    },
+  }
+);
+
 //ANIMATION TIL PROGRAMMER SIDE
 
 gsap.from(".program1", {
@@ -135,7 +157,6 @@ gsap.from(".billede-kontaktform", {
   duration: 0.6, // Animationen tager 400ms
   ease: "power2.inOut", // Tilføjer en easing kurve
   scrollTrigger: {
-    markers: true,
     trigger: ".billede-kontaktform", // Animationen starter, når elementet er synligt i viewport
     start: "top 95%", // Starter animationen, når 20% af toppen er synlig
     toggleActions: "play none none none", // Spil animationen én gang
@@ -153,7 +174,6 @@ gsap.fromTo(".vikon",
     repeat: -1, // Gentag for evigt
     repeatDelay: 5, // Vent 5 sekunder før gentagelse
     scrollTrigger: {
-      markers: true,
       trigger: ".vikontekst", // Animation starter, når denne er i viewport
       start: "top 90%", // Start animationen, når toppen er 90% synlig
       toggleActions: "play none none none", // Spil animationen én gang når synlig
@@ -161,3 +181,35 @@ gsap.fromTo(".vikon",
   }
 );
 
+//Navigation animation til links med GSAP og Splittext lib
+
+const staggerLinks = document.querySelectorAll(".stagger-link"); //Laver en variabed som vælger alle elementer der har .stagger-link class.
+
+staggerLinks.forEach((link) => {
+  const textElement = link.querySelector(".stagger-link-text"); //En NodeList der indeholder alle links med klassen .stagger-link. Bruges til at finde den relevante del af linket (den tekst, der skal animeres). Laver en varibel textElement, så de funde tekst elementer kan bruges i animationen
+
+  // Opdeler teksten til bogstaver der kan animeres
+  const splitText = new SplitType(textElement, { types: "chars" });
+
+  // Laver en GSAP timeline der skal styre animationen
+  const tl = gsap.timeline({ paused: true });
+
+  // Flytter teksten op af Y-aksen, og putter en stack effekt på bogstaverne
+  tl.to(splitText.chars, {
+    y: "-150%", // Flyt hver bogstav -150% op af Y-aksen
+    duration: 0.3,
+    stagger: 0.01, // Hvert bogstavs animation er forsinket med 0.1 sekund, så det giver en rullende effekt
+    ease: "power4.inOut", //Easing effekt
+    overwrite: true, //Effekten bliver startet forfra når du forlader hover stadiet og hurtigt bevæger dig tilbage
+  });
+
+  // Mouse enter event til at starte GSAP timeline animationen
+  link.addEventListener("mouseenter", () => {
+    tl.play();
+  });
+
+  // Mouse leave event afspiller GSAP timeline animationen baglæns
+  link.addEventListener("mouseleave", () => {
+    tl.reverse();
+  });
+});
