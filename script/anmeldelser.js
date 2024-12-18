@@ -74,7 +74,7 @@ function næsteAnmeldelse() {
     opdaterAnmeldelse();
 }
 
-// Initialisering når siden indlæses
+// Begynder når siden indlæses
 document.addEventListener('DOMContentLoaded', () => {
     // Vis første anmeldelse med det samme
     opdaterAnmeldelse();

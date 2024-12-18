@@ -1,4 +1,15 @@
 // Parallax effekt for vores hero billeder
+
+// Lyt efter scroll-begivenhed på vinduet og kør parallax-effekten, når der scroller
+function mediaQuerries (x) {
+  if (x.matches) {
+    window.removeEventListener("scroll", parallaxEffect);
+  }
+  else {
+    window.addEventListener("scroll", parallaxEffect);
+  }
+}
+
 function parallaxEffect() {
   // Hent den nuværende scroll-position på siden
   const scrollPosition = window.scrollY;
@@ -13,6 +24,13 @@ function parallaxEffect() {
   herobillede.style.transform = `translateY(${scrollPosition * speed}px)`;
 }
 
-// Lyt efter scroll-begivenhed på vinduet og kør parallax-effekten, når der scroller
-window.addEventListener("scroll", parallaxEffect);
+// Opret en MediaQueryList til at tjekke skærmstørrelsen
+const x = window.matchMedia("(max-width: 500px)");
+
+// Lyt efter ændringer i MediaQueryList
+x.addEventListener("change", mediaQuerries);
+
+// Initial kontrol for at sætte korrekt tilstand
+mediaQuerries(x);
+
 
