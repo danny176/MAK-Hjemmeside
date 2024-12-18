@@ -165,7 +165,7 @@ gsap.from(".billede-kontaktform", {
 
 gsap.fromTo(".vikon", 
   {
-    y: 50, // Starter nedenfor
+    y: 15, // Starter nedenfor
   }, 
   {
     y: 0, // Flyt til sin oprindelige position

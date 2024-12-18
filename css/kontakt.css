@@ -188,14 +188,14 @@
   .besked-send button {
     position: relative;
     overflow: hidden;
-}
+  }
 
-.besked-send button span {
+  .besked-send button span {
     position: relative;
     z-index: 2;
-}
+  }
 
-.besked-send button:after {
+  .besked-send button:after {
     content: "";
     position: absolute;
     left: 50%;
@@ -207,19 +207,19 @@
     background-color: #fc0e47; /* Accent color for hover fill */
     transform: translate(-50%, 50%);
     transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-}
+  }
 
-.besked-send button:hover:after {
+  .besked-send button:hover:after {
     transform: translate(-50%, -50%);
     cursor: pointer;
-}
+  }
 
-.besked-send button:hover span {
-    color: #FFF;
+  .besked-send button:hover span {
+    color: #fff;
     transition: color 400ms cubic-bezier(0.215, 0.61, 0.355, 1);
     cursor: pointer;
-}
-  
+  }
+
   .radio-group input[type="radio"] {
     display: none;
   }
@@ -263,7 +263,7 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /*Baggrunden bag modalet*/
+    background-color: rgba(0, 0, 0, 0.7); /*Baggrunden bag modalet*/
   }
 
   #modalindhold .lukknap {
@@ -276,20 +276,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    
   }
 
   #modalindhold .vikon {
     width: 120px;
     height: auto;
     padding-top: 5%;
-    
   }
-   
-#modalindhold p {
-  padding-top: 10%;
- text-align: center;
-}
+
+  #modalindhold p {
+    padding-top: 10%;
+    text-align: center;
+  }
 
   /* Modal indholdet */
   #modalindhold {
@@ -301,11 +299,9 @@
     width: 60%;
   }
 
-
   .lukknap:hover {
     cursor: pointer;
   }
-
 }
 
 @media (max-width: 499px) {
@@ -543,33 +539,33 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7); /*Baggrunden bag modalet*/
+    background-color: rgba(0, 0, 0, 0.7); /*Baggrunden bag modalet*/
   }
 
   #modalindhold .lukknap {
     width: 25px;
+    margin: 5px 5px;
     height: auto;
-    float: right;
   }
 
   #vikontekst {
     display: flex;
     flex-direction: column;
     align-items: center;
-    
+    text-align: center;
   }
 
   #modalindhold .vikon {
     width: 60px;
     height: auto;
     padding-top: 5%;
-    
   }
-  
-#modalindhold p {
-  padding-top: 10%;
- text-align: center;
-}
+
+  #modalindhold p {
+    padding-top: 10%;
+    text-align: center;
+    padding: 30px 2vw;
+  }
 
   /* Modal indholdet */
   #modalindhold {
@@ -579,13 +575,8 @@
     padding: 1%;
     padding-bottom: 5%;
     width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
   }
-
-
-  .lukknap:hover {
-    cursor: pointer;
-  }
-
-
 }
-
