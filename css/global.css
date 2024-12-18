@@ -337,6 +337,9 @@ body.lock-scroll {
     z-index: 2;
     width: 100%;
     left: 0;
+    background-color: rgba(42, 42, 42, 0.5);
+    backdrop-filter: blur(40px);
+    transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
   }
 
   /*Style af navbar efter scroll*/

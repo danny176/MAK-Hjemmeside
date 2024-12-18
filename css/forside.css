@@ -1,18 +1,17 @@
 * {
-    font-family: Poppins;
+  font-family: Poppins;
 }
 
 @media (min-width: 500px) {
-
-/* VIDEO SEKTION */
-.video-box {
+  /* VIDEO SEKTION */
+  .video-box {
     position: relative;
     width: 100%;
     height: 75vh;
     overflow: hidden;
-}
-      
-.baggrund-video {
+  }
+
+  .baggrund-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -20,9 +19,9 @@
     height: 75vh;
     object-fit: cover;
     z-index: -1;
-}
+  }
 
-.video-tekst {
+  .video-tekst {
     position: absolute;
     color: white;
     padding: 15rem 5rem 0rem 5rem;
@@ -31,66 +30,65 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+  }
 
-.video-tekst h2 {
+  .video-tekst h2 {
     font-size: 0.8rem;
     font-weight: 400;
-}
+  }
 
-.video-tekst h1 {
+  .video-tekst h1 {
     font-size: 2rem;
     margin-bottom: 1.5vh;
     font-weight: 600;
-}
-      
-.video-tekst p {
+  }
+
+  .video-tekst p {
     font-size: 1rem;
     font-weight: 400;
     width: 44%;
-}
+  }
 
+  /* SEKTIONER */
 
-/* SEKTIONER */
-
-section {
+  section {
     margin: 5% 5% 5% 5%;
-}
+  }
 
-.sektion-intro {
+  .sektion-intro {
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 4%;
     max-width: 1920px;
     padding-top: 100px;
     margin: auto;
-}
+  }
 
-.intro-tekst {
+  .intro-tekst {
     font-family: Poppins;
     max-width: 600px;
-}
+  }
 
-.intro-tekst h2 {
+  .intro-tekst h2 {
     font-size: 20px;
     font-weight: 400;
-}
+  }
 
-.intro-tekst h1 {
+  .intro-tekst h1 {
     font-size: 35px;
     font-weight: 600;
-}
+  }
 
-.intro-tekst p {
+  .intro-tekst p {
     font-size: 1rem;
     font-weight: 400;
-}
+  }
 
-.citat {
+  .citat {
     font-style: italic;
-}
+  }
 
-.intro-knap {
+  .intro-knap {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -106,19 +104,19 @@ section {
     font-weight: 500;
     text-decoration: none;
     border: none;
-}
+  }
 
-.knap-a-tag {
+  .knap-a-tag {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
     z-index: 2;
     position: relative;
-}
+  }
 
-.intro-knap:hover a {
+  .intro-knap:hover a {
     color: white;
-}
+  }
 
   .intro-knap:after /* Fylde figur til kontakt knap hover effekt */ {
     content: "";
@@ -139,24 +137,24 @@ section {
     cursor: pointer;
   }
 
-.træningsprogrammer {
+  .træningsprogrammer {
     padding-bottom: 4%;
     overflow: hidden;
-}
+  }
 
-.træningsprogrammer h2 {
+  .træningsprogrammer h2 {
     padding-bottom: 2%;
     font-size: 30px;
-}
+  }
 
-.programmer {
+  .programmer {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
-}
+  }
 
-.program {
-    background-color: #2722A4;
+  .program {
+    background-color: #2722a4;
     color: #fff;
     flex: 1;
     min-width: 300px;
@@ -164,33 +162,33 @@ section {
     display: flex;
     flex-direction: column;
     align-self: stretch;
-}
+  }
 
-.program-billede {
+  .program-billede {
     width: 100%;
     height: auto;
     object-fit: cover;
-}
+  }
 
-.program-tekst {
+  .program-tekst {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
     padding: 3% 4% 3% 4%;
-}
+  }
 
-.knap-a-tag-programmer {
+  .knap-a-tag-programmer {
     text-decoration: none;
     font-size: 1rem;
     color: rgb(255, 255, 255);
     position: relative;
     z-index: 2;
-}
+  }
 
-.program-knap:hover a {
+  .program-knap:hover a {
     color: white;
-}
+  }
 
   .program-knap:after /* Fylde figur til kontakt knap hover effekt */ {
     content: "";
@@ -211,7 +209,7 @@ section {
     cursor: pointer;
   }
 
-.program h3 {
+  .program h3 {
     /* padding-top: 4%;
     padding-bottom: 4%; */
     font-size: 28px;
@@ -219,22 +217,22 @@ section {
     padding-left: 5%;
     padding-right: 5%; */
     margin: 0;
-}
+  }
 
-.program p {
+  .program p {
     /* padding-left: 5%;
     padding-right: 5%; */
     padding-bottom: 10%;
     padding-top: 5%;
     font-size: 16px;
     flex-grow: 1;
-}
+  }
 
-.program-knap:hover {
+  .program-knap:hover {
     color: white;
-}
+  }
 
-.program-knap {
+  .program-knap {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -253,68 +251,68 @@ section {
     width: fit-content;
     align-self: flex-start;
     margin-top: auto;
-}
+  }
 
-.program-knap p {
+  .program-knap p {
     padding: 0%;
-}
+  }
 
-.forløb h2 {
+  .forløb h2 {
     padding-bottom: 2%;
     font-size: 30px;
-}
+  }
 
-.sektion-forløb {
+  .sektion-forløb {
     display: flex;
     justify-content: space-between;
     overflow: hidden;
-}
+  }
 
-.billede-forløb-container {
+  .billede-forløb-container {
     width: 50%;
-}
+  }
 
-.billede-forløb {
+  .billede-forløb {
     width: 100%;
-}
+  }
 
-.process-forløb {
+  .process-forløb {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     width: 45%;
-}
+  }
 
-.process-trin {
+  .process-trin {
     display: flex;
     gap: 3%;
     align-items: center;
-}
+  }
 
-.forløb h3 {
+  .forløb h3 {
     font-size: 20px;
-}
+  }
 
-.forløb p {
+  .forløb p {
     font-size: 14px;
-}
+  }
 
-.kontakt-sektion {
+  .kontakt-sektion {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 4%;
-}
+  }
 
-.kontakt-sektion h2 {
+  .kontakt-sektion h2 {
     width: 70%;
     text-align: center;
     font-size: 24px;
     font-weight: 500;
     padding: 4%;
-}
+  }
 
-.sektion-kontakt-knap {
+  .sektion-kontakt-knap {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -330,20 +328,19 @@ section {
     font-weight: 500;
     text-decoration: none;
     border: none;
-}
+  }
 
-
-.knap-a-tag {
+  .knap-a-tag {
     text-decoration: none;
     color: white;
     font-size: 1.1rem;
     z-index: 2;
     position: relative;
-}
+  }
 
-.sektion-kontakt-knap:hover a {
+  .sektion-kontakt-knap:hover a {
     color: white;
-}
+  }
 
   .sektion-kontakt-knap:after /* Fylde figur til kontakt knap hover effekt */ {
     content: "";
@@ -364,7 +361,7 @@ section {
     cursor: pointer;
   }
 
-.sektion-anmeldelser {
+  .sektion-anmeldelser {
     background-color: #2722a4;
     display: flex;
     color: white;
@@ -372,71 +369,69 @@ section {
     align-items: center;
     justify-content: space-evenly;
     padding: 50px 0px;
-}
+  }
 
-.anmeldelser-tekst {
+  .anmeldelser-tekst {
     margin: 0;
     width: 45%;
     padding-left: 5%;
-}
+  }
 
-.anmeldelser-tekst h2 {
+  .anmeldelser-tekst h2 {
     font-size: 35px;
-}
+  }
 
-.anmeldelser-citat {
+  .anmeldelser-citat {
     font-style: italic;
-}
+  }
 
-.fed-skrift-navn {
+  .fed-skrift-navn {
     font-weight: 500;
     font-size: 1.2rem;
-}
+  }
 
-.anmeldelser-tekst p {
+  .anmeldelser-tekst p {
     font-size: 20px;
     width: 75%;
-}
+  }
 
-.anmeldelser-stjerner {
+  .anmeldelser-stjerner {
     padding-top: 3vh;
     display: flex;
     gap: 6px;
-}
+  }
 
-.anmeldelser-billede-box {
+  .anmeldelser-billede-box {
     width: 45%;
     height: 70vh;
     object-fit: cover;
-}
+  }
 
-.anmeldelser-billede {
+  .anmeldelser-billede {
     width: 100%;
     height: 100%;
     object-fit: scale-down;
-}
+  }
 
-.sektion-anmeldelser-mobil {
+  .sektion-anmeldelser-mobil {
     display: none;
-}
-
+  }
 }
 
 * {
-    font-family: Poppins;
+  font-family: Poppins;
 }
 
 @media (max-width: 499px) {
-
-/* VIDEO SEKTION */
-.video-box {
+  /* VIDEO SEKTION */
+  .video-box {
     position: relative;
     width: 100%;
     height: 75vh;
     overflow: hidden;
-}
-      
-.baggrund-video {
+  }
+
+  .baggrund-video {
     position: absolute;
     top: 0;
     left: 0;
@@ -444,9 +439,9 @@ section {
     height: 75vh;
     object-fit: cover;
     z-index: -1;
-}
+  }
 
-.video-tekst {
+  .video-tekst {
     position: absolute;
     /* top: 50%;
     left: 50%;
@@ -460,75 +455,74 @@ section {
     display: flex;
     flex-direction: column;
     justify-content: center;
-}
+  }
 
-.video-tekst h2 {
+  .video-tekst h2 {
     font-size: 1rem;
     font-weight: 400;
-}
+  }
 
-.video-tekst h1 {
+  .video-tekst h1 {
     font-size: 2rem;
     margin-bottom: 1rem;
     font-weight: 500;
-}
-      
-.video-tekst p {
+  }
+
+  .video-tekst p {
     font-size: 1rem;
     line-height: 1.5;
     font-weight: 200;
     width: 100%;
-}
+  }
 
+  /* SEKTIONER */
 
-/* SEKTIONER */
-
-section {
+  section {
     margin: 5% 5% 5% 5%;
-}
+  }
 
-.sektion-intro {
+  .sektion-intro {
     display: flex;
     flex-direction: column;
     margin-left: 5%;
     margin-right: 5%;
     padding-bottom: 4%;
     margin-top: 5vh;
-}
+  }
 
-.intro-billede-box {
+  .intro-billede-box {
     display: flex;
     justify-content: center;
-}
+  }
 
-.intro-billede {
+  .intro-billede {
     width: 90%;
-}
+  }
 
-.intro-tekst {
+  .intro-tekst {
     font-family: Poppins;
-}
+  }
 
-.intro-tekst h2 {
+  .intro-tekst h2 {
     font-size: 20px;
     font-weight: 400;
-}
+  }
 
-.intro-tekst h1 {
+  .intro-tekst h1 {
     font-size: 1.6rem;
     font-weight: 600;
-}
+  }
 
-.intro-tekst p {
+  .intro-tekst p {
     font-size: 1rem;
     font-weight: 400;
-}
+  }
 
-.citat {
+  .citat {
     font-style: italic;
-}
+  }
 
-.intro-knap {
+  .intro-knap {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -540,36 +534,36 @@ section {
     z-index: 2;
     color: white;
     font-family: "Poppins";
-    font-size: 1.3em;
+    font-size: 1.1rem;
     font-weight: 500;
     text-decoration: none;
     border: none;
-}
+  }
 
-.knap-a-tag {
+  .knap-a-tag {
     text-decoration: none;
     color: white;
-}
+  }
 
-.træningsprogrammer {
+  .træningsprogrammer {
     padding-bottom: 4%;
     overflow: hidden;
-}
+  }
 
-.træningsprogrammer h2 {
+  .træningsprogrammer h2 {
     padding-bottom: 2%;
     font-size: 1.3rem;
-}
+  }
 
-.programmer {
+  .programmer {
     display: flex;
     gap: 3rem;
     flex-wrap: wrap;
     margin-bottom: 4%;
-}
+  }
 
-.program {
-    background-color: #2722A4;
+  .program {
+    background-color: #2722a4;
     color: #fff;
     flex: 1;
     min-width: 300px;
@@ -578,25 +572,25 @@ section {
     flex-direction: column;
     /* justify-content: space-between; */
     align-self: stretch;
-}
+  }
 
-.program-billede {
+  .program-billede {
     width: 100%;
     height: auto;
     object-fit: cover;
     /* display: block;
     max-width: 100%; */
-}
+  }
 
-.program-tekst {
+  .program-tekst {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: space-between;
     padding: 3% 4% 3% 4%;
-}
+  }
 
-.program h3 {
+  .program h3 {
     /* padding-top: 4%;
     padding-bottom: 4%; */
     font-size: 28px;
@@ -604,18 +598,18 @@ section {
     padding-left: 5%;
     padding-right: 5%; */
     margin: 0;
-}
+  }
 
-.program p {
+  .program p {
     /* padding-left: 5%;
     padding-right: 5%; */
     padding-bottom: 10%;
     padding-top: 5%;
     font-size: 16px;
     flex-grow: 1;
-}
+  }
 
-.program-knap {
+  .program-knap {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -631,76 +625,77 @@ section {
     font-weight: 500;
     text-decoration: none;
     border: none;
-    /* margin-left: 5%;
-    margin-bottom: 4%; */
+    margin-bottom: 5%;
     width: fit-content;
     align-self: flex-start;
     margin-top: auto;
-}
+    width: 100%;
+    text-align: center;
+  }
 
-.program-knap p {
+  .program-knap p {
     padding: 0%;
-}
+  }
 
-.forløb h2 {
+  .forløb h2 {
     padding-bottom: 2%;
     font-size: 1.3rem;
-}
+  }
 
-.sektion-forløb {
+  .sektion-forløb {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     overflow: hidden;
-}
+  }
 
-.billede-forløb-container {
+  .billede-forløb-container {
     width: 100%;
-}
+  }
 
-.billede-forløb {
+  .billede-forløb {
     width: 100%;
-}
+  }
 
-.process-forløb {
+  .process-forløb {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
     width: 100%;
     margin-top: 5%;
-}
+  }
 
-.process-trin {
+  .process-trin {
     display: flex;
     gap: 3%;
     align-items: center;
-}
+  }
 
-.forløb h3 {
+  .forløb h3 {
     font-size: 0.9rem;
-}
+  }
 
-.forløb p {
+  .forløb p {
     font-size: 0.7rem;
-}
+  }
 
-.kontakt-sektion {
+  .kontakt-sektion {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-bottom: 4%;
     padding-top: 4%;
-}
+  }
 
-.kontakt-sektion h2 {
+  .kontakt-sektion h2 {
     width: 100%;
     text-align: center;
     font-size: 0.7rem;
     font-weight: 500;
     padding: 4%;
-}
+  }
 
-.sektion-kontakt-knap {
+  .sektion-kontakt-knap {
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -716,13 +711,13 @@ section {
     font-weight: 500;
     text-decoration: none;
     border: none;
-}
+  }
 
-.sektion-anmeldelser {
+  .sektion-anmeldelser {
     display: none;
-}
+  }
 
-.sektion-anmeldelser-mobil {
+  .sektion-anmeldelser-mobil {
     background-color: #2722a4;
     display: flex;
     flex-direction: column;
@@ -732,43 +727,42 @@ section {
     align-items: center;
     justify-content: space-between;
     padding: 5% 5% 5% 5%;
-}
+  }
 
-.anmeldelser-tekst-mobil {
+  .anmeldelser-tekst-mobil {
     margin: 0;
     width: 100%;
-}
+  }
 
-.anmeldelser-tekst-mobil h2 {
+  .anmeldelser-tekst-mobil h2 {
     font-size: 1.3rem;
-}
+  }
 
-.anmeldelser-citat-mobil {
+  .anmeldelser-citat-mobil {
     font-style: italic;
-}
+  }
 
-.anmeldelser-tekst-mobil p {
+  .anmeldelser-tekst-mobil p {
     font-size: 1rem;
     display: flex;
     justify-content: center;
-}
+  }
 
-.anmeldelser-billede-box {
+  .anmeldelser-billede-box {
     width: 45%;
     height: 75vh;
-}
+  }
 
-.anmeldelser-billede-mobil {
+  .anmeldelser-billede-mobil {
     width: 100%;
-}
+  }
 
-.anmeldelser-stjerner {
+  .anmeldelser-stjerner {
     display: flex;
     justify-content: center;
-}
+  }
 
-.footer {
+  .footer {
     margin: 0;
-}
-
+  }
 }

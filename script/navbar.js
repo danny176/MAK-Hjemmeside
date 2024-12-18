@@ -1,4 +1,21 @@
 // Når man scroller ned fra toppen af siden, så ændres baggrundsfarven på navbar samt at navbar bliver skjult og vist kun når man scroller op igen
+function mediaQuerries (x) {
+  if (x.matches) {
+    window.removeEventListener("scroll");
+  }
+  else {
+    window.addEventListener("scroll");
+  }
+}
+
+// Opret en MediaQueryList til at tjekke skærmstørrelsen
+const x = window.matchMedia("(max-width: 500px)");
+
+// Lyt efter ændringer i MediaQueryList
+x.addEventListener("change", mediaQuerries);
+
+// Initial kontrol for at sætte korrekt tilstand
+mediaQuerries(x);
 
 // Holder styr på sidste scroll-position
 let lastScrollY = 0;
