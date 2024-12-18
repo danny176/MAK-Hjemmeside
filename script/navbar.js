@@ -1,22 +1,3 @@
-// Når man scroller ned fra toppen af siden, så ændres baggrundsfarven på navbar samt at navbar bliver skjult og vist kun når man scroller op igen
-function mediaQuerries (x) {
-  if (x.matches) {
-    window.removeEventListener("scroll");
-  }
-  else {
-    window.addEventListener("scroll");
-  }
-}
-
-// Opret en MediaQueryList til at tjekke skærmstørrelsen
-const x = window.matchMedia("(max-width: 500px)");
-
-// Lyt efter ændringer i MediaQueryList
-x.addEventListener("change", mediaQuerries);
-
-// Initial kontrol for at sætte korrekt tilstand
-mediaQuerries(x);
-
 // Holder styr på sidste scroll-position
 let lastScrollY = 0;
 
@@ -37,8 +18,14 @@ document.addEventListener("scroll", function () {
   // Henter den aktuelle scroll-position
   const currentScrollY = window.scrollY;
 
-   // Skjuller eller visser navbar afhængigt af scroll-retning
-   if (currentScrollY > lastScrollY) {
+  // Stopper bounce effect på mobil og returnere til starts position
+  if (currentScrollY < 0) {
+    window.scrollTo(0, 0);
+    return;
+  }
+
+  // Skjuller eller visser navbar afhængigt af scroll-retning
+  if (currentScrollY > lastScrollY) {
     // Bruger scroller ned, skjul navbar
     navbar.style.transform = "translateY(-100%)";
   } else {
@@ -46,8 +33,8 @@ document.addEventListener("scroll", function () {
     navbar.style.transform = "translateY(0)";
   }
 
-   // Hvis brugeren har scrollet forbi ændringspunktet (changePoint)
-   if (currentScrollY > changePoint) {
+  // Hvis brugeren har scrollet forbi ændringspunktet (changePoint)
+  if (currentScrollY > changePoint) {
     // Tilføjer klassen "scrolled" til navbar for at ændre dens baggrund
     navbar.classList.add("scrolled");
     // Tilføjer klassen "text-dark" til hver "stagger-link-text" for at ændre deres tekstfarve til sort
@@ -56,7 +43,6 @@ document.addEventListener("scroll", function () {
     logo.src = "/images/maklogosort2.svg";
     // Skifter til sort burgermenu-ikon
     burgerMenuIcon.src = "/ikoner/burgermenuSort.png";
-    
   } else {
     // Fjerner klassen "scrolled", så navbaren får sin oprindelige baggrund igen
     navbar.classList.remove("scrolled");
