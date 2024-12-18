@@ -311,7 +311,7 @@
 @media (max-width: 499px) {
   .herobillede {
     width: 100%;
-    height: 90vh;
+    height: 50vh;
     overflow: hidden;
   }
 
@@ -403,7 +403,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
-    margin: 50px 64px;
+    margin: 50px 24px;
     align-items: center;
     justify-content: space-evenly;
   }
@@ -453,7 +453,7 @@
     font-size: 0.5vw;
     font-style: normal;
     font-weight: 400;
-    width: 400px;
+    width: 100%;
   }
 
   .vaelg-emne {
