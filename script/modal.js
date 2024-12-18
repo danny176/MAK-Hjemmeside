@@ -40,16 +40,6 @@ luk.onclick = function () {
   document.querySelector("form").reset();
 };
 
-// Klik udenfor modalet, og det bliver lukket
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-
-    // Ryd formularen, så brugeren kan starte forfra
-    document.querySelector("form").reset();
-  }
-};
-
 // Funktion til at validere formularen
 function validateForm() {
   // Tjek om alle felter i formularen er udfyldt
