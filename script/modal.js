@@ -1,13 +1,13 @@
 // Variabler - fra HTML 
 const modal = document.getElementById("modaltak"); //Selve modallet 
 const knap = document.getElementById("sendknap"); //Send knappen
-const luk = document.getElementsByClassName("lukknap")[0]; //Luk knappen
+const luk = document.getElementsByClassName("lukknap")[0]; //Luk knappen //Bruger ikke ID fordi der er class i DOC
 const modaltekst = document.getElementById("tekstmodal"); // Tekst i modalet
 const firstnameInput = document.getElementById("firstname"); // Fornavn input
 const lastnameInput = document.getElementById("lastname"); // Efternavn input
 const emailInput = document.getElementById("email"); // E-mail input
 const phoneInput = document.getElementById("phone"); // Telefon input
-const subjectInputs = document.querySelectorAll("input[name='subject']"); // Radioknapper til emner
+const subjectInputs = document.querySelectorAll("input[name='subject']"); // Radioknapper til emner //Flere valgmuligheder derfor queryselector
 const messageInput = document.getElementById("message"); // Besked input
 
 // Klik på send, og modalet bliver åbnet
@@ -18,7 +18,7 @@ knap.onclick = function (event) {
   // Tjek om formularen er korrekt udfyldt
   if (!validateForm()) {
     alert("Udfyld venligst alle felterne korrekt."); // Fejlmeddelelse hvis felterne ik er udfyldt
-    return;
+    return; //Forsætter hvis rigtig
   }
 
   // Hent brugerens fornavn fra input-feltet
@@ -37,17 +37,7 @@ luk.onclick = function () {
   modal.style.display = "none";
 
   // Ryd formularen, så brugeren kan starte forfra, og navnet ikke bliver husket 
-  document.querySelector("form").reset();
-};
-
-// Klik udenfor modalet, og det bliver lukket
-window.onclick = function (event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-
-    // Ryd formularen, så brugeren kan starte forfra
-    document.querySelector("form").reset();
-  }
+  document.querySelector("form").reset(); //Sørger for du er ikke forvirret om du har sendt besked eller ej
 };
 
 // Funktion til at validere formularen
@@ -59,7 +49,7 @@ function validateForm() {
     emailInput.value.trim() === "" ||
     phoneInput.value.trim() === "" ||
     messageInput.value.trim() === "" ||
-    !Array.from(subjectInputs).some((input) => input.checked) // Tjek om mindst en radioknap er valgt
+    !Array.from(subjectInputs).some((input) => input.checked) // Tjek om mindst en radioknap er valgt *Tjek mandag
   ) {
     return false; // Validering fejler, hvis et felt mangler at blive udfyldt
   }

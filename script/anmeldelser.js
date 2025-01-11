@@ -40,7 +40,7 @@ function opdaterAnmeldelse() {
     const mobilBillede = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-billede-mobil');
     const mobilStjerner = document.querySelector('.sektion-anmeldelser-mobil .anmeldelser-stjerner');
 
-    // Opdater citater
+    // Opdater citater, tilføjer gåseøjne til teksten 
     if (desktopCitat) desktopCitat.textContent = '"' + aktuelAnmeldelse.citat + '"';
     if (mobilCitat) mobilCitat.textContent = '"' + aktuelAnmeldelse.citat + '"';
 
@@ -52,7 +52,7 @@ function opdaterAnmeldelse() {
     if (desktopBillede) desktopBillede.src = aktuelAnmeldelse.billede;
     if (mobilBillede) mobilBillede.src = aktuelAnmeldelse.billede;
 
-    // Funktion til at oprette stjerne-ikoner
+    // Funktion til at oprette stjerne-ikoner *Kig videre på mandag
     function opretStjerneIkoner(stjerner) {
         let stjerneHtml = '';
         // Opret 5 stjerner, hvor nogle er udfyldt baseret på anmeldelsesstjerners antal
@@ -67,9 +67,9 @@ function opdaterAnmeldelse() {
     if (mobilStjerner) mobilStjerner.innerHTML = opretStjerneIkoner(aktuelAnmeldelse.stjerner);
 }
 
-// Funktion til at gå til næste anmeldelse
+// Funktion til at gå til næste anmeldelse, Sørger for at anmeldeserne kører i ring *Kig på mandag //Forenklet metode af et loop, samme værdier hele vejen ikke behov for kompleks loop
 function næsteAnmeldelse() {
-    // Brug modulo-operator for at cykle gennem arrayet
+    // Brug modulo-operator for at cykle gennem arrayet // Tager review index og plusser med 1 for at gå videre til næste, giver plus 1% så den ved at hvor den er nået og når den rammer 4% skal den gå tilbage til først, % bruges for at modulo virker
     anmeldelsesReviewIndex = (anmeldelsesReviewIndex + 1) % kundeAnmeldelser.length;
     opdaterAnmeldelse();
 }

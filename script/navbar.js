@@ -24,7 +24,7 @@ document.addEventListener("scroll", function () {
     return;
   }
 
-  // Skjuller eller visser navbar afhængigt af scroll-retning
+  // Skjuller eller visser navbar afhængigt af scroll-retning //større værdi på scrollY skjuler nav, mindre værdi viser den.
   if (currentScrollY > lastScrollY) {
     // Bruger scroller ned, skjul navbar
     navbar.style.transform = "translateY(-100%)";

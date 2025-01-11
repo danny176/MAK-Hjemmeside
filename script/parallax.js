@@ -1,11 +1,10 @@
 // Parallax effekt for vores hero billeder
 
-// Lyt efter scroll-begivenhed på vinduet og kør parallax-effekten, når der scroller
-function mediaQuerries (x) {
+// Lyt efter scroll-begivenhed på vinduet og kør parallax-effekten, når der scroller // Fjerne parralax effekt på mobilen fordi det ikke virkede
+function mediaQuerries(x) {
   if (x.matches) {
     window.removeEventListener("scroll", parallaxEffect);
-  }
-  else {
+  } else {
     window.addEventListener("scroll", parallaxEffect);
   }
 }
@@ -28,9 +27,7 @@ function parallaxEffect() {
 const x = window.matchMedia("(max-width: 500px)");
 
 // Lyt efter ændringer i MediaQueryList
-x.addEventListener("change", mediaQuerries);
+x.addEventListener("change", mediaQuerries); //Overflådig kode fra tidligere
 
 // Initial kontrol for at sætte korrekt tilstand
 mediaQuerries(x);
-
-
