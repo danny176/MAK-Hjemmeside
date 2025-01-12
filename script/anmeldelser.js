@@ -56,8 +56,9 @@ function opdaterAnmeldelse() {
     function opretStjerneIkoner(stjerner) {
         let stjerneHtml = '';
         // Opret 5 stjerner, hvor nogle er udfyldt baseret på anmeldelsesstjerners antal
-        for (let i = 0; i < 5; i++) {
-            stjerneHtml += '<img src="ikoner/' + (i < stjerner ? 'udfyldtstjerne' : 'tomstjerne') + '.svg" alt="Stjerne">';
+        for (let i = 0; i < 5; i++) { // Let i = 0 - er starten, her bliver variablen I sat til at være 0, det sker kun 1 gang. Efter dette kommer (i<5), dette er løkken som fortsætter så længe i er mindre end 5. i++ er her vi tæller hvor langt vi er. Den vil hver gang i løkken blive forhøjet med 1 så den til sidst ender med at sige 5<5 og derfor stopper løkken. Det er det samme som at skive i= i + 1.
+            stjerneHtml += '<img src="ikoner/' + (i < stjerner ? 'udfyldtstjerne' : 'tomstjerne') + '.svg" alt="Stjerne">'; // til start vil den kunne opdatere hjemmesiden HTML fil, og til føje de stjerner som skal ind.
+            // (i < stjerner ? 'udfyldtstjerne' : 'tomstjerne') betyder at den går op i arrayet og ser hvor mange stjerner som skal bruges. Derefter kan den med ( i < stjerner ?) se om det skal være en tomstjerne eller en fyldt stjerne. Det betyder så at løkken kør igennem 5 gange, og tjekker om i er mindre end stjernerne. Hvis den er dette vælger den udfyldtstjerne billedet. Hvis i er det samme eller større, vælger den tomstjerne billedet.
         }
         return stjerneHtml;
     }
