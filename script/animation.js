@@ -36,7 +36,6 @@ gsap.utils.toArray(".process-trin").forEach(function (program, index) {
   });
 });
 
-
 //Animation til anmeldelse sektion
 gsap.from(".anmeldelser-tekst", {
   x: -100, // Starter animationen ude til højre med 100px på X-aksen
@@ -65,11 +64,12 @@ gsap.from(".intro-tekst", {
 
 //Animation til kontakt CTA
 
-gsap.fromTo(".kontakt-sektion", 
+gsap.fromTo(
+  ".kontakt-sektion",
   {
     y: 50, // Starter nedenfor
     opacity: 0,
-  }, 
+  },
   {
     y: 0, // Flyt til sin oprindelige position
     opacity: 1,
@@ -163,10 +163,11 @@ gsap.from(".billede-kontaktform", {
   },
 });
 
-gsap.fromTo(".vikon", 
+gsap.fromTo(
+  ".vikon",
   {
     y: 15, // Starter nedenfor
-  }, 
+  },
   {
     y: 0, // Flyt til sin oprindelige position
     duration: 1, // Animationen tager 2 sekunder
@@ -183,13 +184,13 @@ gsap.fromTo(".vikon",
 
 //Navigation animation til links med GSAP og Splittext lib
 
-const staggerLinks = document.querySelectorAll(".stagger-link"); //Laver en variabed som vælger alle elementer der har .stagger-link class.
+const staggerLinks = document.querySelectorAll(".stagger-link"); //Laver en variabed som vælger alle DOM elementer der har .stagger-link class. Bliver gemt som en NodeList (Lidt ligesom array)
 
-staggerLinks.forEach((link) => {
+staggerLinks.forEach((link) => { //Kalder en funktion som bliver kaldt ved alle elementer i NodeListen. Link bliver brugt som parametre for forEach metoden, skal bruges for at refere til det element senere hen
   const textElement = link.querySelector(".stagger-link-text"); //En NodeList der indeholder alle links med klassen .stagger-link. Bruges til at finde den relevante del af linket (den tekst, der skal animeres). Laver en varibel textElement, så de funde tekst elementer kan bruges i animationen
 
   // Opdeler teksten til bogstaver der kan animeres
-  const splitText = new SplitType(textElement, { types: "chars" });
+  const splitText = new SplitType(textElement, { types: "chars" }); //Resultatet, som gemmes i variablen splitText, er et objekt, der indeholder forskellige måder at tilgå de opdelte komponenter på, f.eks. splitText.chars, som er en liste (array) af de individuelle bogstaver (characters) i teksten.
 
   // Laver en GSAP timeline der skal styre animationen
   const tl = gsap.timeline({ paused: true });

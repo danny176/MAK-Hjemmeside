@@ -19,9 +19,11 @@ function parallaxEffect() {
   // Sæt hastigheden for parallax-effekten
   const speed = 0.5; // Hastigheden af bevægelsen i forhold til scrollen
 
-  // Ændre billedets position baseret på scroll-positionen og hastigheden
-  herobillede.style.transform = `translateY(${scrollPosition * speed}px)`;
+  // Ændre billedets position baseret på scroll-positionen og hastigheden. Gør sådan at billedet bevæger sig op af Y-aksen, langsommere end brugeren scroller, da vores speed værdi er 0.5
+  herobillede.style.transform = `translateY(${scrollPosition * speed}px)`; //translateY(${scrollPosition * speed}px) er en CSS værdi med udregning i midten. Kaldes en interpolation, det beregner et tal baseret på værdierne af de anvendte variabler. 
 }
+
+//Beregningen af scrollPosition * speed bliver 200 * 0.5 = 100. Dvs at værdien bliver herobillede.style.transform = translateY(100px)
 
 // Opret en MediaQueryList til at tjekke skærmstørrelsen
 const x = window.matchMedia("(max-width: 500px)");
