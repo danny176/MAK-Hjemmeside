@@ -27,7 +27,7 @@ function parallaxEffect() {
 const x = window.matchMedia("(max-width: 500px)");
 
 // Lyt efter ændringer i MediaQueryList
-x.addEventListener("change", mediaQuerries); //Overflådig kode fra tidligere
+x.addEventListener("change", mediaQuerries); //TJekker om den skal tilføje eller fjerne parallax effect, baseret på skræmstørrelsen
 
 // Initial kontrol for at sætte korrekt tilstand
 mediaQuerries(x);
